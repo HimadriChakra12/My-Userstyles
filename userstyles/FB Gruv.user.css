@@ -1,0 +1,20 @@
+/* ==UserStyle==
+@name           FB Gruv
+@namespace      github.com/openstyles/stylus
+@version        1.0.0
+@description    A new userstyle
+@author         Me
+==/UserStyle== */
+
+@-moz-document domain("www.facebook.com") {
+    /* Insert code here... */
+    :root{
+    --fb-logo :#458588!important;
+    --primary-button-background: #83a598  !important;
+        --web-wash: #1d2021 !important;
+    --story-unseen: #458588 !important;
+        --progress-ring-blue-foreground: #458588 !important;
+        --blue-link:#458588;
+            --attachment-footer-background: #1d2021 !important
+}
+}
