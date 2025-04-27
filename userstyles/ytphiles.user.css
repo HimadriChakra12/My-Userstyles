@@ -1,0 +1,27 @@
+/* ==UserStyle==
+@name          YouTube For Audiophiles
+@namespace     https://userstyles.world/user/him
+@version       1.0.0
+@description   YouTube SFW: only audio. No video.
+@author        wddd
+==/UserStyle== */
+@-moz-document domain("www.youtube.com") {
+    .video-stream {
+        display: none !important;
+    }
+    .ytp-ce-video {
+        display: none !important;
+    }
+    .ytp-ce-expanding-image {
+        display: none !important;
+    }
+    .ytp-videowall-still {
+        display: none !important;
+    }
+    div {
+        background-image: none !important;
+    }
+    #progress {
+        display: block !important;
+    }
+}
