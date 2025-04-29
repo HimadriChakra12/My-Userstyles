@@ -1,0 +1,20 @@
+/* ==UserStyle==
+@name           search.brave.com
+@namespace      github.com/openstyles/stylus
+@version        1.0.0
+@description    A new userstyle
+@author         Me
+==/UserStyle== */
+
+@-moz-document domain("search.brave.com") {
+    /* Insert code here... */
+    #search-page, #nav-tabs{
+        background: #222324
+    }
+    #site-header{
+        background: #32302f;
+    }
+    div[class="header-content svelte-1jv8j14"] a[class="nav-logo btn btn-link svelte-1jv8j14"]{
+        display: none
+    }
+}
