@@ -7,15 +7,19 @@
 ==/UserStyle== */
 @-moz-document domain("www.youtube.com") {
     .video-stream {
+        height: 10px;
         display: none !important;
     }
     .ytp-ce-video {
+        height: 10px;
         display: none !important;
     }
     .ytp-ce-expanding-image {
+        height: 10px;
         display: none !important;
     }
     .ytp-videowall-still {
+        height: 10px;
         display: none !important;
     }
     div {
@@ -23,5 +27,8 @@
     }
     #progress {
         display: block !important;
+    }
+    .html5-video-player, div[id="player-container-outer"]{
+        height: 14pc
     }
 }
