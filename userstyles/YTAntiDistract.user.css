@@ -7,22 +7,65 @@
 @license      NONE
 @preprocessor uso
 ==/UserStyle== */
-@-moz-document domain("youtube.com") {
-/* All of YouTube */
-/* #contents, .style-scope.ytd-notification-topbar-button-renderer.notification-button-style-type-default, .ytp-videowall-still.ytp-suggestion-set {
+@-moz-document regexp("^https:\\/\\/www\\.youtube\\.com\\/?$") {
+    /* All of YouTube */
+    /* #contents, .style-scope.ytd-notification-topbar-button-renderer.notification-button-style-type-default, .ytp-videowall-still.ytp-suggestion-set {
     display: none !important;
 } */
-/*Remove notification button*/
- .style-scope.ytd-notification-topbar-button-renderer/*ytd-notification-topbar-button-renderer #button.ytd-notification-topbar-button-renderer */ {
-    display: none;
+    /*Remove notification button*/
+    .style-scope.ytd-notification-topbar-button-renderer/*ytd-notification-topbar-button-renderer #button.ytd-notification-topbar-button-renderer */ {
+        display: none;
+    }
+    /* Thumbnail Hovering */
+    #thumbnail{
+        opacity: 0;
+        height: 20px;
+    }
+    ytd-rich-grid-media[class="style-scope ytd-rich-item-renderer"]:hover #thumbnail{
+        position: absolute;
+        height: 40rem !important;
+        width: 69rem !important;
+        z-index: 999;
+            opacity: 0;
+        left: -20%
+    }
+    #container:has(video[class="video-stream html5-main-video"]){
+    z-index: 999;
 }
-#thumbnail{
-	visibility: hidden;
-	height: 30px
-}
-	#thumbnail:hover{
-		visibility: visible;
-	}
+
+   #contents:hover div[id="byline-container"]{
+        opacity: 0
+    }
+    div[id="byline-container"]:hover{
+        opacity: 1
+    }
+    /* per shits */
+    /*
+    ytd-rich-grid-media[class="style-scope ytd-rich-item-renderer"]:hover #thumbnail{
+    position: absolute;
+    height: 15rem !important;
+    width: 29rem !important;
+    z-index: 999;
+    opacity: 0
+    }
+    #container:has(video[class="video-stream html5-main-video"]){
+    z-index: 999;
+    }
+
+    ytd-rich-grid-media[class="style-scope ytd-rich-item-renderer"]:hover div[id="byline-container"]{
+    opacity: 0
+    }
+    div[id="byline-container"]:hover{
+    opacity: 1
+    }
+    */
+
+    ytd-mini-guide-renderer[class="style-scope ytd-app"]{
+        display: none
+    }
+    #frosted-glass, #scroll-container{
+        display: none
+    }
 }
 
 @-moz-document url-prefix("https://www.youtube.com/watch") {
@@ -30,4 +73,14 @@
 #secondary, #related {
     display: none;
 }
+}
+
+@-moz-document regexp("^https:\\/\\/www\\.youtube\\.com\\/@[\\w.-]+\\/?$") {
+    #thumbnail{
+        visibility: hidden;
+    }
+    ytd-thumbnail[class="style-scope ytd-grid-video-renderer"]{
+        height: 0px
+    }
+
 }
