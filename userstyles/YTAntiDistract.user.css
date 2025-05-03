@@ -61,8 +61,6 @@
    div[id="metadata-line"]{
        visibility: hidden
    }
-   
-   
    ytd-mini-guide-renderer[class="style-scope ytd-app"]{
        display: none
    }
@@ -83,7 +81,7 @@
    
        }
    }
-   
+
    @-moz-document url-prefix("https://www.youtube.com/watch") {
        /*Removes recommendation view after watching videos. Turn off autoplay too if you want. */
        #secondary, #related {
