@@ -257,15 +257,13 @@
     .scrollerItem {
         box-shadow: none !important;
     }
+     aside[class="flex flex-col recent-posts-right-rail xs:my-md bg-neutral-background-weak rounded-[16px]"] {
+  background-color: #32302f !important;
+}
     }
-
+    
 @-moz-document domain("www.reddit.com") {
         /* Insert code here... */
-       main[id="main-content"]{
-           width: 70vw;
-           position: revert;
-           z-index: 999;
-       }
        div[id="left-sidebar-container"], div[class="pr-lg flex gap-xs items-center justify-start"], div[class="pl-lg gap-xs flex items-center justify-end"]{
            display: none
 
@@ -276,4 +274,14 @@
        #t3_pmmsrm, div[id="comment-tree-content-anchor-pmmsrm"]{
            background: #060606
        }
-   }
+   
+    aside[class="flex flex-col recent-posts-right-rail xs:my-md bg-neutral-background-weak rounded-[16px]"] {
+  background-color: #32302f !important;
+}
+    #right-sidebar-container{
+        display: none
+    }
+    main[id="main-content"]{
+        width: 50vw
+    }
+}
