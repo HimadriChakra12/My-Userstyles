@@ -16,12 +16,12 @@
     style.innerHTML = `
         #stickerToggle {
             position: fixed;
-            top: 50%;
-            right: 0;
-            background: #3897f0;
+            bottom: 0%;
+            right: 10%;
+            background: var(--ig-primary-background);
             color: #fff;
             padding: 10px;
-            border-radius: 5px 0 0 5px;
+            border-radius: 100%;
             cursor: pointer;
             z-index: 9998;
             transform: translateY(-50%);
@@ -29,11 +29,11 @@
 
         #stickerSidebar {
             position: fixed;
-            top: 100px;
-            right: 0;
+            top: 10px;
+            right: 2px;
             width: 140px;
-            background: #fff;
-            border-left: 2px solid #ccc;
+            background: #1c1c1c;
+            border-left: 0px solid #ccc;
             z-index: 9999;
             padding: 10px;
             max-height: 80vh;
@@ -48,23 +48,24 @@
         }
 
         #addStickerBtn {
-            background: #3897f0;
+            background: #1c1c1c;
             color: #fff;
             padding: 5px;
-            border: none;
-            width: 100%;
+            border: 1px solid #c8c8c8;
+            width: 20%;
             margin-bottom: 10px;
             cursor: pointer;
         }
 
         #closeStickerSidebar {
             position: absolute;
-            top: 5px;
+            top: 10px;
             right: 8px;
             cursor: pointer;
             font-weight: bold;
             font-size: 14px;
             color: #666;
+            transition : 1s ease-in-out;
         }
 
         #addStickerInput {
@@ -76,7 +77,7 @@
     // --- Toggle Button ---
     const toggleBtn = document.createElement('div');
     toggleBtn.id = 'stickerToggle';
-    toggleBtn.textContent = '🧷 Stickers';
+    toggleBtn.textContent = '౨ৎ';
     document.body.appendChild(toggleBtn);
 
     // --- Sidebar UI ---
@@ -85,7 +86,7 @@
     sidebar.style.display = 'none';
     sidebar.innerHTML = `
         <div id="closeStickerSidebar">✕</div>
-        <button id="addStickerBtn">Add Sticker</button>
+        <button id="addStickerBtn">+</button>
         <input type="file" id="addStickerInput" accept="image/*">
         <div id="stickerList"></div>
     `;
