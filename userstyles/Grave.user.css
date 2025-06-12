@@ -18,3 +18,29 @@
         display: none
     }
 }
+@-moz-document domain("search.brave.com") {
+    /* Insert code here... */
+    main[class="svelte-1xzvc2r"]{
+        background: #212121
+    }
+    div[class="searchform-container svelte-17r9frn llm-enabled multiline"]{
+        background: #222222 !important;
+    }
+    div[class="download-cta svelte-1xzvc2r"]{
+        display: none !important;
+    }
+    button[id="submit-button"], button[id="submit-llm-button"], div[id="clear-query-divider"]{
+        display: none !important;
+    }
+    img[class="svelte-1qo6czq"]{
+        filter: 
+            sepia(0.9)
+            saturate(1.5)
+            hue-rotate(-15deg)
+            brightness(0.9)
+            contrast(1.2);
+    }
+    button[id="settings-button"]{
+        filter: sepia(88%) saturate(56%) hue-rotate(47deg) brightness(87%) contrast(88%);
+    }   
+}
