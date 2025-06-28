@@ -276,4 +276,37 @@
        #t3_pmmsrm, div[id="comment-tree-content-anchor-pmmsrm"]{
            background: #060606
        }
-   }
+    a.button-medium.px-[var(--rem8)]
+    button-plain.icon
+    items-center.justify-center
+    button.inline-flex {
+        display: none;
+    }
+
+    a.button-medium.px-[var(--rem14)]
+    button-plain.items-center.justify-center
+    button.inline-flex {
+        display: none;
+    }
+
+    div div section {
+        display: none;
+    }
+
+    span.text-neutral-content-weak.flex.gap-[var(--rem4)].flex.flex-wrap.items-center.gap-xs {
+        display: none;
+    }
+
+    a.a.cursor-pointer.text-secondary-plain-weak.hover:text-secondary-plain-hover.no-visited.visited:text-secondary-plain-weak.text-12.no-visited.hover:underline {
+        display: none;
+    }
+
+    div.rounded-[1rem].bg-neutral-background-weak.h-min.p-md.my-md {
+        display: none;
+    }
+
+    div aside recent-posts {
+        display: none;
+    }
+
+}
