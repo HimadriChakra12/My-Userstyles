@@ -51,39 +51,6 @@
         display: none;
     }
 
-    /* navbar */
-    ._aa4c {
-        --nav-narrow-width: 0px;
-        --nav-medium-width: 0px;
-        --nav-wide-width: 0px;
-    }
-
-    .x1o5hw5a.x1o5hw5a {
-        --nav-narrow-width: 72px;
-        --nav-medium-width: 72px;
-    }
-
-    .xaeubzz.xaeubzz {
-        --nav-wide-width: 72px;
-    }
-
-    .x1o5hw5a.x1o5hw5a:hover {
-        --nav-medium-width: 244px;
-    }
-
-    .xaeubzz.xaeubzz:hover {
-        --nav-wide-width: 335px;
-    }
-
-    ._aagx {
-        width: 100%;
-    }
-    #splash-screen{
-        filter: invert(1)
-    }
-    #splash-screen img{
-        filter: invert(1)
-    }
 }
 
 /* Instagram Layout for laptop*/
@@ -143,28 +110,6 @@
         width: min(103px, 100%);
     }
 
-    /* read more button & view all comments button */
-    article > div > div:nth-child(3) {
-        .html-div {
-            width: 100%;
-        }
-        span.x1roi4f4:not([role="img"]) {
-            border-radius: 2px;
-            text-align: left;
-            padding: 0px;
-        }
-
-        .xryxfnj [role="button"] {
-            display: block !important;
-            margin-top: 12px;
-        }
-
-        .x9f619.x1xmf6yo,
-        [role="link"],
-        [role="link"] > span {
-            width: 100%;
-        }
-    }
 
     /* main article */
     @media screen and (min-width: 800px) {
