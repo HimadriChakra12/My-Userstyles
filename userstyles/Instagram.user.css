@@ -8,15 +8,18 @@
 
 @-moz-document domain("www.instagram.com") {
     /* Insert code here... */
-
+    :root{
+        --article: #0c0c0c;
+        --article-gruv: #202020;
+    }
     /* article */
     div[class="xvbhtw8 x78zum5 xdt5ytf x5yr21d x1n2onr6"],div[class="xvbhtw8 x78zum5 xdt5ytf x5yr21d x1n2onr6"]:hover{
-        background-color: #0c0c0c;
+        background-color: var(--article-gruv);
         padding: 10px;
         margin-top: 10px
     }
     div[class="x78zum5 xdt5ytf x5yr21d xa1mljc xh8yej3 x1bs97v6 x1q0q8m5 xso031l x11aubdm xnc8uc2"]{
-        background-color: #0c0c0c;
+        background-color: var(--article-gruv);
         padding: 20px;
         border-radius: 10px
     }
@@ -36,7 +39,6 @@
         background-color: #101010;
         padding: 5px;
         border-radius: 10px;
-        display: none
 
     }
 
@@ -75,9 +77,6 @@
 
     ._aagx {
         width: 100%;
-    }
-    .x47corl {
-        pointer-events: all;
     }
     #splash-screen{
         filter: invert(1)
