@@ -1,0 +1,131 @@
+/* ==UserStyle==
+@name         Instagram - Layout For Laptop
+@version      20251101.15.33
+@namespace    userstyles.world/user/kinsley
+@description  I made this for my 14 inch laptop, better for browsing on small screens.
+@author       kinsley
+@license      No License
+==/UserStyle== */
+@-moz-document domain("instagram.com") {
+  /* font size */
+  :root,
+  article {
+    --system-14-font-size: 18px;
+    --system-14-line-height: 1.3;
+  }
+
+  button {
+    --system-14-font-size: 14px;
+  }
+
+  article {
+    ._aacl._aaco._aacu._aacx._aad7._aade,
+    ._acan,
+    .x1f6kntn {
+      font-size: var(--system-14-font-size);
+      line-height: var(--system-14-line-height);
+      overflow-wrap: anywhere;
+    }
+  }
+
+  /* sidebar */
+  .x6bx242 {
+    display: none;
+  }
+
+  /* navbar */
+  ._aa4c {
+    --nav-narrow-width: 0px;
+    --nav-medium-width: 0px;
+    --nav-wide-width: 0px;
+  }
+
+  .x1o5hw5a.x1o5hw5a,
+  .xw2csxc {
+    --nav-narrow-width: 72px;
+    --nav-medium-width: 72px;
+  }
+
+  .xaeubzz.xaeubzz {
+    --nav-wide-width: 72px;
+  }
+
+  .x1o5hw5a.x1o5hw5a:hover {
+    --nav-medium-width: 244px;
+  }
+
+  .xaeubzz.xaeubzz:hover {
+    --nav-wide-width: 335px;
+  }
+
+  svg[aria-label="Instagram"] {
+    width: min(103px, 100%);
+  }
+
+  /* read more button & view all comments button */
+  article > div > div:nth-child(3) {
+    span.x1roi4f4:not([role="img"]) {
+      border: 1px solid #999;
+      border-radius: 2px;
+      text-align: center;
+      padding: 8px;
+    }
+
+    .xryxfnj [role="button"] {
+      display: block !important;
+      margin-top: 12px;
+    }
+
+    .x9f619.x1xmf6yo,
+    [role="link"],
+    [role="link"] > span {
+      width: 100%;
+    }
+  }
+
+  /* main article */
+  @media screen and (min-width: 800px) {
+    .x17snn68.x17snn68 {
+      width: 100%;
+      /* Settings page */
+      .html-div > .xw2csxc:nth-child(1) {
+        padding-left: var(--nav-medium-width);
+      }
+    }
+ 
+    main > .xl56j7k > div[style] {
+      min-width: 630px !important;
+      width: 67% !important;
+      max-width: 80% !important;
+    }
+
+    .xmnaoh6 + div > div {
+      width: 100% !important;
+    }
+
+    /* variant & home */
+    main > div > div > .xw7yly9 > div,
+    article > .xdt5ytf:not(.xtcbf50) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      > div {
+        box-sizing: border-box;
+      }
+
+      > div:nth-child(1) {
+        flex: 100%;
+      }
+
+      > div:nth-child(2) {
+        flex: 55%;
+      }
+
+      > div:nth-child(3) {
+        flex: 45%;
+        > div {
+          padding: 0 10px;
+        }
+      }
+    }
+  }
+}
