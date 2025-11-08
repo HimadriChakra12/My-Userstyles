@@ -33,4 +33,35 @@
     div[class="x6s0dn4 x1bs97v6 x1q0q8m5 x9f619 xat24cr xh8yej3 x1qhh985 x14z7g9a xzbw6zd x78zum5 x1q0g3np x1qughib xsag5q8 x13jy36j x64bnmy xijc0j3"],div[class="x2lah0s x1to3lk4 x1n2onr6 xh8yej3"]{
         display: none
     }
+    /* Dark Scrollbar*/
+::-webkit-scrollbar,
+ ::-webkit-scrollbar-corner,
+ ::-webkit-scrollbar,
+::-webkit-scrollbar-corner {
+    background: var(--bg-color) !important;
+    width: 8px
+  }
+::-webkit-scrollbar-button,
+ ::-webkit-scrollbar-button {
+    display: none !important;
+  }
+::-webkit-scrollbar-thumb,
+ ::-webkit-scrollbar-thumb {
+    background: #999 !important;
+    width: 8px !important;
+    border-radius: 10px;
+     transition: .1s !important;
+  }
+::-webkit-scrollbar-thumb:not(:active):hover,
+ ::-webkit-scrollbar-thumb:not(:active):hover {
+    background: #777 !important;
+     transition: .1s !important;
+  }
+::-webkit-scrollbar-thumb:active,
+::-webkit-scrollbar-thumb:hover:active,
+ ::-webkit-scrollbar-thumb:active,
+ ::-webkit-scrollbar-thumb:hover:active {
+    background: #5c5c5c !important;
+     transition: .1s !important;
+  }
 }
