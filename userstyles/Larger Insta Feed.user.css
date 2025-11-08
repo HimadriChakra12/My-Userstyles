@@ -1,0 +1,203 @@
+/* ==UserStyle==
+@name         Larger feed (Photos and videos) By Riox by rioxrenato
+@description  Scale up Instagram web UI elements for better visibility
+@namespace    Riox
+@author       rioxrenato
+@version      1.0.0
+@preprocessor stylus
+@var select   scaleSize "UI Scale Size" ["medium:Medium (1.2x)", "large:Large (1.35x)", "xlarge:Extra Large (1.5x)"]
+==/UserStyle== */
+@-moz-document domain("instagram.com") {
+  /* Scale variables */
+  :root {
+    --scale-factor: 1.2; /* Default medium scale */
+  }
+  
+  if scaleSize==large {
+    :root {
+      --scale-factor: 1.3; /* Fixed from 1.3 to match description */
+    }
+  }
+  else if scaleSize==xlarge {
+    :root {
+      --scale-factor: 1.3; /* Fixed from 1.3 to match description */
+    }
+  }
+  
+    /* Reels */
+  section > main > div:nth-child(1) > section > ._aam1._amtu._akej._amtv._aam2._akmr > ._aac4._aac5._aac6._aj3f {
+    padding-left: 1rem;
+  }
+
+  /* Suggested for you */
+  div.x1dr59a3.x13vifvy.x7vhb2i.x6bx242 {
+    margin-top: 2.7rem;
+
+    & > div:first-child {
+      margin-top: 1rem;
+      margin-left: 5rem;
+    }
+  }
+
+
+  /* General scaling */
+  /* Posts content width */
+  main > .x1qjc9v5.x78zum5.x1q0g3np.xl56j7k.xh8yej3 > div:nth-child(1) > div > .x9f619.xjbqb8w.x78zum5.x168nmei.x13lgxp2.x5pf9jr.xo71vjh.x1uhb9sk.x1plvlek.xryxfnj.x1c4vz4f.x2lah0s.xdt5ytf.xqjyukv.x6s0dn4.x1oa3qoh.x1nhvcw1 > div {
+    width: calc(35dvw * var(--scale-factor)) !important;
+    max-width: 90dvw !important;
+  }
+  
+  /* Post content scaling with proper spacing */
+  article {
+    transform: scale(var(--scale-factor));
+    transform-origin: top center;
+    margin-bottom: calc(100px * var(--scale-factor)) !important; /* Increased margin to prevent overlap */
+    
+    & > div > .x6s0dn4.xyzq4qe.x78zum5.xdt5ytf.x2lah0s.xl56j7k.x6ikm8r.x10wlt62.x1n2onr6.x5ur3kl.xopu45v.x1bs97v6.xmo9t06.x1lcm9me.x1yr5g0i.xrt01vj.x10y3i5r.x13fuv20.xu3j5b3.x1q0q8m5.x26u7qi.x178xt8z.xm81vs4.xso031l.xy80clv > div:nth-child(1) > div > div,
+    & > div > .x6s0dn4.xyzq4qe.x78zum5.xdt5ytf.x2lah0s.xl56j7k.x6ikm8r.x10wlt62.x1n2onr6.x5ur3kl.xopu45v.x1bs97v6.xmo9t06.x1lcm9me.x1yr5g0i.xrt01vj.x10y3i5r.x13fuv20.xu3j5b3.x1q0q8m5.x26u7qi.x178xt8z.xm81vs4.xso031l.xy80clv > div:nth-child(1) > div > div > div > div > ._aamn > .x9f619.xjbqb8w.x78zum5.x168nmei.x13lgxp2.x5pf9jr.xo71vjh.x10l6tqk.x1ey2m1c.x13vifvy.x17qophe.xds687c.x1plvlek.xryxfnj.x1c4vz4f.x2lah0s.xdt5ytf.xqjyukv.x1qjc9v5.x1oa3qoh.x1nhvcw1 > div > div > div > ul > li > div,
+    & > div > .x6s0dn4.xyzq4qe.x78zum5.xdt5ytf.x2lah0s.xl56j7k.x6ikm8r.x10wlt62.x1n2onr6.x5ur3kl.xopu45v.x1bs97v6.xmo9t06.x1lcm9me.x1yr5g0i.xrt01vj.x10y3i5r.x13fuv20.xu3j5b3.x1q0q8m5.x26u7qi.x178xt8z.xm81vs4.xso031l.xy80clv > div:nth-child(1) > div > div > div > div > .x1lliihq.x1n2onr6 > .x9f619.xjbqb8w.x78zum5.x168nmei.x13lgxp2.x5pf9jr.xo71vjh.x10l6tqk.x1ey2m1c.x13vifvy.x17qophe.xds687c.x1plvlek.xryxfnj.x1c4vz4f.x2lah0s.xdt5ytf.xqjyukv.x1qjc9v5.x1oa3qoh.x1nhvcw1 > div > div > div > ul > li > div {
+      width: calc(33dvw * var(--scale-factor)) !important;
+      max-width: 85dvw !important;
+    }
+  }
+
+  /* Story items scaling with horizontal spacing adjustment */
+  main > .x1qjc9v5.x78zum5.x1q0g3np.xl56j7k.xh8yej3 > div:nth-child(1) > div > .xmnaoh6 > div {
+    padding-right: calc(40px * var(--scale-factor)); /* Add padding to the container */
+  }
+  
+  main > .x1qjc9v5.x78zum5.x1q0g3np.xl56j7k.xh8yej3 > div:nth-child(1) > div > .xmnaoh6 > div > div {
+    transform: scale(var(--scale-factor));
+    transform-origin: left center;
+    margin-right: calc(25px * var(--scale-factor)); /* Increased margin between story items */
+  }
+
+  /* Sidebar scaling with adjusted positioning */
+  #scrollview > div > div > .x78zum5.xdt5ytf.x1t2pt76.x1n2onr6.x1ja2u2z.x10cihs4 {
+    padding-right: calc(15px * var(--scale-factor)); /* Add padding to container */
+  }
+  
+  #scrollview > div > div > .x78zum5.xdt5ytf.x1t2pt76.x1n2onr6.x1ja2u2z.x10cihs4 > div > div > div > div > div > div {
+    transform: scale(var(--scale-factor));
+    transform-origin: left center;
+    margin-bottom: calc(10px * var(--scale-factor)); /* Add vertical spacing between items */
+  }
+
+  /* Navigation icons scaling with spacing */
+  .x1iyjqo2.x1vqgdyp.x150jy0e.x1e558r4 {
+    padding: 0 calc(20px * var(--scale-factor)); /* Add horizontal padding to container */
+  }
+  
+  .x1iyjqo2.x1vqgdyp.x150jy0e.x1e558r4 > div > div > div > div > div > div > span {
+    transform: scale(var(--scale-factor));
+    margin: 0 calc(10px * var(--scale-factor)); /* Increased margin between nav icons */
+  }
+
+  /* Search results scaling */
+  .x9f619.xjbqb8w.x78zum5.x168nmei.x13lgxp2.x5pf9jr.xo71vjh.x1n2onr6.x1plvlek.xryxfnj.x1iyjqo2.x2lwn1j.xeuugli.xdt5ytf.xqjyukv.x1qjc9v5.x1oa3qoh.x1nhvcw1 {
+    padding: calc(10px * var(--scale-factor)); /* Add padding to search container */
+  }
+  
+  .x9f619.xjbqb8w.x78zum5.x168nmei.x13lgxp2.x5pf9jr.xo71vjh.x1n2onr6.x1plvlek.xryxfnj.x1iyjqo2.x2lwn1j.xeuugli.xdt5ytf.xqjyukv.x1qjc9v5.x1oa3qoh.x1nhvcw1 > .x9f619.xjbqb8w.x78zum5.x168nmei.x13lgxp2.x5pf9jr.xo71vjh.x1d52u69.xktsk01.x1n2onr6.x1plvlek.xryxfnj.x1c4vz4f.x2lah0s.xdt5ytf.xqjyukv.x1qjc9v5.x1oa3qoh.x1nhvcw1 > div > input {
+    transform: scale(var(--scale-factor));
+    transform-origin: center left;
+    margin-bottom: calc(20px * var(--scale-factor)); /* Increased bottom margin */
+  }
+
+  /* Profile page scaling with better spacing */
+  section > main {
+    margin-bottom: calc(40px * var(--scale-factor)); /* Add margin to bottom of profile section */
+  }
+  
+  section > main > div > header {
+    transform: scale(var(--scale-factor));
+    transform-origin: top center;
+    margin-bottom: calc(40px * var(--scale-factor)); /* Increased bottom margin */
+    padding-top: calc(20px * (var(--scale-factor) - 1)); /* Add padding at top */
+  }
+
+  /* Profile images scaling with increased spacing */
+  section > main > div > .xzzrveb.x1h862dm.xjk3ia2.x1tb5o9v {
+    transform: scale(var(--scale-factor));
+    transform-origin: top center;
+    margin-bottom: calc(30px * var(--scale-factor)); /* Increased margin below profile images */
+    margin-top: calc(10px * var(--scale-factor)); /* Add margin above profile images */
+  }
+
+  /* Suggested accounts scaling with proper spacing */
+  main > .x1qjc9v5.x78zum5.x1q0g3np.xl56j7k.xh8yej3 > .x1dr59a3.x13vifvy.x3hkoc4.x6bx242 {
+    padding-bottom: calc(20px * var(--scale-factor)); /* Add padding to container */
+  }
+  
+  main > .x1qjc9v5.x78zum5.x1q0g3np.xl56j7k.xh8yej3 > .x1dr59a3.x13vifvy.x3hkoc4.x6bx242 > div > .x9f619.xjbqb8w.x78zum5.x168nmei.x13lgxp2.x5pf9jr.xo71vjh.xqui205.x1e56ztr.x1uhb9sk.x1plvlek.xryxfnj.x1c4vz4f.x2lah0s.xdt5ytf.xqjyukv.x1qjc9v5.x1oa3qoh.x1nhvcw1 > div > div {
+    transform: scale(var(--scale-factor));
+    transform-origin: top center;
+    margin-bottom: calc(25px * var(--scale-factor)); /* Increased margin between suggested accounts */
+  }
+
+  /* Notifications scaling with increased spacing */
+  .x9f619.x1n2onr6.x1ja2u2z > div > div > .x78zum5.xdt5ytf.x1t2pt76.x1n2onr6.x1ja2u2z.x10cihs4 {
+    padding: calc(10px * var(--scale-factor)); /* Add padding to container */
+  }
+  
+  .x9f619.x1n2onr6.x1ja2u2z > div > div > .x78zum5.xdt5ytf.x1t2pt76.x1n2onr6.x1ja2u2z.x10cihs4 > .x9f619.xvbhtw8.x78zum5.x168nmei.x13lgxp2.x5pf9jr.xo71vjh.x1uhb9sk.x1plvlek.xryxfnj.x1c4vz4f.x2lah0s.x1q0g3np.xqjyukv.x1qjc9v5.x1oa3qoh.x1qughib > .x9f619.xjbqb8w.x78zum5.x168nmei.x13lgxp2.x5pf9jr.xo71vjh.x1plvlek.xryxfnj.x1c4vz4f.x2lah0s.xdt5ytf.xqjyukv.x1qjc9v5.x1oa3qoh.x1nhvcw1.x1dr59a3.xixxii4.x13vifvy.xeq5yr9.x1n327nk > div > div > .x10l6tqk.x1u3tz30.x1ja2u2z > div > div {
+    transform: scale(var(--scale-factor));
+    transform-origin: top center;
+    margin-bottom: calc(20px * var(--scale-factor)); /* Add spacing between notification items */
+  }
+
+  /* Emoji picker scaling with adjusted position */
+  .xu96u03.xm80bdy.x10l6tqk.x13vifvy > .x1uvtmcs.x4k7w5x.x1h91t0o.x1beo9mf.xaigb6o.x12ejxvf.x3igimt.xarpa2k.xedcshv.x1lytzrv.x1t2pt76.x7ja8zs.x1n2onr6.x1qrby5j.x1jfb8zj {
+    padding: calc(5px * var(--scale-factor)); /* Add padding to container */
+  }
+  
+  .xu96u03.xm80bdy.x10l6tqk.x13vifvy > .x1uvtmcs.x4k7w5x.x1h91t0o.x1beo9mf.xaigb6o.x12ejxvf.x3igimt.xarpa2k.xedcshv.x1lytzrv.x1t2pt76.x7ja8zs.x1n2onr6.x1qrby5j.x1jfb8zj > div > div > div > div > div {
+    transform: scale(var(--scale-factor));
+    transform-origin: bottom right;
+    margin: calc(5px * var(--scale-factor)); /* Add margin around emoji items */
+  }
+
+  /* Font size scaling for better readability */
+  body {
+    font-size: calc(14px * var(--scale-factor));
+  }
+
+  /* Comment section scaling with adjusted height */
+  textarea {
+    font-size: calc(14px * var(--scale-factor));
+    height: calc(18px * var(--scale-factor)) !important;
+    padding: calc(2px * var(--scale-factor)) calc(5px * var(--scale-factor)); /* Add padding inside textarea */
+  }
+
+  /* Dialog scaling with proper positioning */
+  .x1n2onr6.xzkaem6 {
+    padding: calc(20px * var(--scale-factor)); /* Add padding to dialog container */
+  }
+  
+  .x1n2onr6.xzkaem6 > .x9f619.x1n2onr6.x1ja2u2z > div > .x1uvtmcs.x4k7w5x.x1h91t0o.x1beo9mf.xaigb6o.x12ejxvf.x3igimt.xarpa2k.xedcshv.x1lytzrv.x1t2pt76.x7ja8zs.x1n2onr6.x1qrby5j.x1jfb8zj > div > div > div {
+    transform: scale(var(--scale-factor));
+    transform-origin: center center;
+    margin: calc(15px * var(--scale-factor)); /* Add margin around dialog content */
+  }
+  
+  /* Fix for feed scrolling container - add vertical padding */
+  main > .x1qjc9v5.x78zum5.x1q0g3np.xl56j7k.xh8yej3 > div:nth-child(1) > div {
+    padding-top: calc(20px * var(--scale-factor));
+    padding-bottom: calc(80px * var(--scale-factor)); /* Additional padding at bottom of feed */
+  }
+  
+  /* Suggested for you */
+    main > .x1qjc9v5.x78zum5.x1q0g3np.xl56j7k.xh8yej3 > .x1dr59a3.x13vifvy.x3hkoc4.x6bx242 > div > .x9f619.xjbqb8w.x78zum5.x168nmei.x13lgxp2.x5pf9jr.xo71vjh.xqui205.x1e56ztr.x1uhb9sk.x1plvlek.xryxfnj.x1c4vz4f.x2lah0s.xdt5ytf.xqjyukv.x1qjc9v5.x1oa3qoh.x1nhvcw1 > div > div {
+      background-color: var(--darker);
+      box-shadow: rgb(1, 4, 9) 0px 3px 6px 0px;
+
+      span {
+        color: linkColor;
+      }
+    }
+
+    main > div > section > ._aam1._amtu._akej._amtv._aam2._akmr span {
+      color: var(--text-color);
+    }
+
+}
