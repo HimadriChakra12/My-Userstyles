@@ -25,43 +25,187 @@
         background: #0000002e;
 
     }
-        span[class="x1lliihq x1plvlek xryxfnj x1n2onr6 xyejjpt x15dsfln x193iq5w xeuugli x1fj9vlw x13faqbe x1vvkbs x1s928wv xhkezso x1gmr53x x1cpjm7i x1fgarty x1943h6x x1i0vuye xvs91rp x1s688f x5n08af x10wh9bi xpm28yp x8viiok x1o7cslx"],span[class="x1lliihq x1plvlek xryxfnj x1n2onr6 xyejjpt x15dsfln x193iq5w xeuugli x1fj9vlw x13faqbe x1vvkbs x1s928wv xhkezso x1gmr53x x1cpjm7i x1fgarty x1943h6x x1i0vuye xvs91rp x1s688f x1roi4f4 x10wh9bi xpm28yp x8viiok x1o7cslx"]{
+    span[class="x1lliihq x1plvlek xryxfnj x1n2onr6 xyejjpt x15dsfln x193iq5w xeuugli x1fj9vlw x13faqbe x1vvkbs x1s928wv xhkezso x1gmr53x x1cpjm7i x1fgarty x1943h6x x1i0vuye xvs91rp x1s688f x5n08af x10wh9bi xpm28yp x8viiok x1o7cslx"],span[class="x1lliihq x1plvlek xryxfnj x1n2onr6 xyejjpt x15dsfln x193iq5w xeuugli x1fj9vlw x13faqbe x1vvkbs x1s928wv xhkezso x1gmr53x x1cpjm7i x1fgarty x1943h6x x1i0vuye xvs91rp x1s688f x1roi4f4 x10wh9bi xpm28yp x8viiok x1o7cslx"]{
         padding: 10px;
         border-radius: 80px;
-        
+
     }
     div[class="x6s0dn4 x1bs97v6 x1q0q8m5 x9f619 xat24cr xh8yej3 x1qhh985 x14z7g9a xzbw6zd x78zum5 x1q0g3np x1qughib xsag5q8 x13jy36j x64bnmy xijc0j3"],div[class="x2lah0s x1to3lk4 x1n2onr6 xh8yej3"]{
         display: none
     }
     /* Dark Scrollbar*/
-::-webkit-scrollbar,
- ::-webkit-scrollbar-corner,
- ::-webkit-scrollbar,
-::-webkit-scrollbar-corner {
-    background: var(--bg-color) !important;
-    width: 8px
-  }
-::-webkit-scrollbar-button,
- ::-webkit-scrollbar-button {
-    display: none !important;
-  }
-::-webkit-scrollbar-thumb,
- ::-webkit-scrollbar-thumb {
-    background: #999 !important;
-    width: 8px !important;
-    border-radius: 10px;
-     transition: .1s !important;
-  }
-::-webkit-scrollbar-thumb:not(:active):hover,
- ::-webkit-scrollbar-thumb:not(:active):hover {
-    background: #777 !important;
-     transition: .1s !important;
-  }
-::-webkit-scrollbar-thumb:active,
-::-webkit-scrollbar-thumb:hover:active,
- ::-webkit-scrollbar-thumb:active,
- ::-webkit-scrollbar-thumb:hover:active {
-    background: #5c5c5c !important;
-     transition: .1s !important;
-  }
+    ::-webkit-scrollbar,
+    ::-webkit-scrollbar-corner,
+    ::-webkit-scrollbar,
+    ::-webkit-scrollbar-corner {
+        background: var(--bg-color) !important;
+        width: 8px
+    }
+    ::-webkit-scrollbar-button,
+    ::-webkit-scrollbar-button {
+        display: none !important;
+    }
+    ::-webkit-scrollbar-thumb,
+    ::-webkit-scrollbar-thumb {
+        background: #999 !important;
+        width: 8px !important;
+        border-radius: 10px;
+        transition: .1s !important;
+    }
+    ::-webkit-scrollbar-thumb:not(:active):hover,
+    ::-webkit-scrollbar-thumb:not(:active):hover {
+        background: #777 !important;
+        transition: .1s !important;
+    }
+    ::-webkit-scrollbar-thumb:active,
+    ::-webkit-scrollbar-thumb:hover:active,
+    ::-webkit-scrollbar-thumb:active,
+    ::-webkit-scrollbar-thumb:hover:active {
+        background: #5c5c5c !important;
+        transition: .1s !important;
+    }
+    a:not(a[href='/']):not(a[href='/explore/']):not(a[href='inbox/']):not(a[href='/explore/']):not(a[href='/seb0000001/']) {
+        /* display: none; */
+        visibility: visible
+    }
+    .Di7vw,
+    .a-input-text,
+    .pbgfb,
+    input,
+    input[type=email],
+    input[type=number],
+    input[type=password],
+    input[type=search],
+    input[type=tel],
+    input[type=text],
+    select,
+    textarea {
+        background-color: #1d0909!important;
+        border-radius: 22px!important;
+        color: #fff!important;
+    }
+    .Ckrof,
+    .v1Nh3,
+    ._41KYi{
+        filter: brightness(75%)!important;
+    }
+
+    .Ckrof:hover,
+    .v1Nh3:hover,
+    ._41KYi:hover{
+        filter: brightness(100%)!important;
+    }
+
+    img{
+        border-radius: 22px!important;
+    }
+    img{
+        -webkit-box-reflect: below 0 -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(70%, transparent), to(rgba(250, 250, 250, 0.1)));
+    }
+
+    svg[aria-label="Home"] {
+        background: url(https://i.ibb.co/Lkvsdyv/Home-48x48.png) no-repeat!important;
+        box-sizing: border-box;
+    }
+
+    svg[aria-label="Home"] {
+        background-size: 26px!important;
+        height: 24px;
+        padding-left: 29px!important;
+    }
+    svg[aria-label="Instagram"] {
+        background: url(https://i.ibb.co/YQ5F02g/Instagram.png) no-repeat!important;
+        box-sizing: border-box;
+    }
+
+    svg[aria-label="Instagram"] {
+        background-size: 26px!important;
+        padding-left: 29px!important;
+    }
+}
+
+
+@-moz-document domain("instagram.com") {
+    /*Bramabraves*/
+
+    .coreSpriteSpeechBubbleSmall,
+    svg[aria-label="Comment"] {
+        background-size: 26px!important;
+        padding-left: 29px!important;
+    }
+
+    /* Explore _______________________________________________________________*/
+
+    .XrOey [href="/explore/"] svg {
+        background: url(https://image.ibb.co/mizzNb/compass.png) no-repeat!important;
+        box-sizing: border-box;
+    }
+
+    .XrOey [href="/explore/"] svg {
+        background-size: 26px!important;
+        padding-left: 29px!important;
+    }
+
+    /* Heart _______________________________________________________________*/
+
+    svg[aria-label="Like"],
+    .XrOey [href="/accounts/activity/"] svg {
+        background: url(https://i.ibb.co/FB9kX4W/healthy-heart.png) no-repeat!important;
+    }
+
+
+    /* Home _______________________________________________________________*/
+
+    svg[aria-label="Home"] {
+        background: url(https://i.ibb.co/Lkvsdyv/Home-48x48.png) no-repeat!important;
+        box-sizing: border-box;
+    }
+
+    svg[aria-label="Home"] {
+        background-size: 26px!important;
+        height: 24px;
+        padding-left: 29px!important;
+    }
+
+    /* Instagram Icon _______________________________________________________________*/
+
+    svg[aria-label="Instagram"] {
+        background: url(https://i.ibb.co/YQ5F02g/Instagram.png) no-repeat!important;
+        box-sizing: border-box;
+    }
+
+    svg[aria-label="Instagram"] {
+        background-size: 26px!important;
+        padding-left: 29px!important;
+    }
+
+    img[alt="Instagram"] {
+        background: url(https://i.ibb.co/SdGnLmF/Instagram-logo.png) no-repeat!important;
+        box-sizing: border-box;
+    }
+
+    img[alt="Instagram"] {
+        background-size: 113px!important;
+        padding-left: 82px!important;
+        height: 46px;
+        width: 111px;
+    }
+
+    /* Profile (Avatar) _______________________________________________________________*/
+
+    [src="https://instagram.fman2-2.fna.fbcdn.net/v/t51.2885-19/44884218_345707102882519_2446069589734326272_n.jpg?_nc_ht=instagram.fman2-2.fna.fbcdn.net&_nc_ohc=T--tU1Sh73YAX-IezzC&oh=40f9fa7e9f8aeeeb618647454526fa2c&oe=5EB875F1"],
+    .XrOey svg[aria-label="Profile"] {
+        background: url(https://i.ibb.co/g3wQg00/avatar-32x32.png) no-repeat!important;
+        box-sizing: border-box;
+    }
+
+    .XrOey svg[aria-label="Profile"] {
+        background-size: 26px!important;
+        padding-left: 29px!important;
+    }
+
+    [src="https://instagram.fman2-2.fna.fbcdn.net/v/t51.2885-19/44884218_345707102882519_2446069589734326272_n.jpg?_nc_ht=instagram.fman2-2.fna.fbcdn.net&_nc_ohc=T--tU1Sh73YAX-IezzC&oh=40f9fa7e9f8aeeeb618647454526fa2c&oe=5EB875F1"] {
+        background-size: 49px!important;
+        padding-left: 50px!important;
+    }
 }
