@@ -33,29 +33,37 @@
     div[class="x6s0dn4 x1bs97v6 x1q0q8m5 x9f619 xat24cr xh8yej3 x1qhh985 x14z7g9a xzbw6zd x78zum5 x1q0g3np x1qughib xsag5q8 x13jy36j x64bnmy xijc0j3"],div[class="x2lah0s x1to3lk4 x1n2onr6 xh8yej3"]{
         display: none
     }
+
+
     /* Dark Scrollbar*/
     ::-webkit-scrollbar,
     ::-webkit-scrollbar-corner,
     ::-webkit-scrollbar,
-    ::-webkit-scrollbar-corner {
-        background: var(--bg-color) !important;
-        width: 8px
-    }
+    ::-webkit-scrollbar-corner,
+    ::-webkit-scrollbar
+        {
+            width: 7px;
+        }
     ::-webkit-scrollbar-button,
     ::-webkit-scrollbar-button {
         display: none !important;
     }
-    ::-webkit-scrollbar-thumb,
-    ::-webkit-scrollbar-thumb {
-        background: #999 !important;
-        width: 8px !important;
+    ::-webkit-scrollbar-thumb
+    {
+        -webkit-border-radius: 10px;
         border-radius: 10px;
-        transition: .1s !important;
+        background: rgba(255, 255, 255, .15);
+        transition: .1s;
     }
     ::-webkit-scrollbar-thumb:not(:active):hover,
     ::-webkit-scrollbar-thumb:not(:active):hover {
         background: #777 !important;
         transition: .1s !important;
+    }
+    ::-webkit-scrollbar-thumb:hover
+    {
+        background: rgba(0, 0, 0, .34);
+        transition: .1s;
     }
     ::-webkit-scrollbar-thumb:active,
     ::-webkit-scrollbar-thumb:hover:active,
@@ -97,7 +105,7 @@
     }
 
     img{
-        border-radius: 22px!important;
+        border-radius: 10px !important;
     }
     img{
         -webkit-box-reflect: below 0 -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(70%, transparent), to(rgba(250, 250, 250, 0.1)));
@@ -122,17 +130,63 @@
         background-size: 26px!important;
         padding-left: 29px!important;
     }
+
+
+
+    /*Hara Theme*/
+    
+    ._aasi._aasj._ai9a
+    {
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+        border: solid 1px;
+        border-color: rgba(255, 255, 255, .4);
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+        background: rgba(0, 0, 0, 0.5) !important;
+    }
+    ._aatk._aiao
+    {
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+        border-color: rgba(255, 255, 255, .4) !important;
+    }
+    .x78zum5.x1q0g3np.x6s0dn4.x76ihet.xwmqs3e.x112ta8.xxxdfa6.xz9dl7a.x4uap5.xsag5q8.xkhd6sd
+    {
+        display: none;
+    }
+    .x6s0dn4.x1q4h3jn.x78zum5.x1y1aw1k.xxbr6pl.xwib8y2.xbbxn1n.x87ps6o.x1wq6e7o.x1di1pr7.x1h4gsww.xux34ky.x1ypdohk.x1l895ks:hover,
+    .x1i10hfl.xjbqb8w.x6umtig.x1b1mbwd.xaqea5y.xav7gou.x9f619.x1ypdohk.xe8uvvx.xdj266r.x11i5rnm.xat24cr.x1mh8g0r.x16tdsg8.x1hl2dhg.xggy1nq.x1a2a7pz.x6s0dn4.x78zum5.x1y1aw1k.xxbr6pl.xwib8y2.xbbxn1n.x87ps6o.x1wq6e7o.x1di1pr7.x1h4gsww.xux34ky.x1l895ks.x1lku1pv[role="button"]:hover
+    {
+        background: rgba(255, 255, 255, .11) !important;
+        border-radius: 20px;
+        transition: 0.3s;
+    }
+    /* ================switch account=========== */
+    .x1ja2u2z.x1afcbsf.x1a2a7pz.x6ikm8r.x10wlt62.x71s49j.x78zum5.xdt5ytf.x1n2onr6.xl56j7k.x6s0dn4[role="dialog"]
+    {
+        background: rgba(0, 0, 0, .88) !important;
+        border-radius: 20px;
+    }
+    .x1i10hfl.x1qjc9v5.xjbqb8w.xjqpnuy.xa49m3k.xqeqjp1.x2hbi6w.x13fuv20.xu3j5b3.x1q0q8m5.x26u7qi.x972fbf.xcfux6l.x1qhh985.xm0m39n.x9f619.x1ypdohk.xdl72j9.x2lah0s.xe8uvvx.xdj266r.x11i5rnm.xat24cr.x1mh8g0r.x2lwn1j.xeuugli.xexx8yu.x4uap5.x18d9i69.xkhd6sd.x1n2onr6.x16tdsg8.x1hl2dhg.xggy1nq.x1ja2u2z.x1t137rt.x1q0g3np.x87ps6o.x1lku1pv.x1a2a7pz.xh8yej3.x193iq5w.x1lliihq.x1dm5mii.x16mil14.xiojian.x1yutycm[role="button"]:not(:has(.x9f619.xjbqb8w.x78zum5.x168nmei.x13lgxp2.x5pf9jr.xo71vjh.x4uap5.xkhd6sd.x18d9i69.xexx8yu.x1uhb9sk.x1plvlek.xryxfnj.x1c4vz4f.x2lah0s.xdt5ytf.xqjyukv.x1qjc9v5.x1oa3qoh.x1nhvcw1)):hover
+    {
+        background: rgba(255, 255, 255, .11) !important;
+        border-radius: 15px;
+    }
+    .xu96u03.xm80bdy.x10l6tqk.x13vifvy.xfbpl4g.x127lhb5.xa3vuyk
+    {
+        background: rgba(0, 0, 0, .9) !important;
+        position: fixed;
+        transform: translate(1122px, 179px);
+        border-radius: 5px !important;
+        border: solid 1px;
+    }
 }
 
 
 @-moz-document domain("instagram.com") {
     /*Bramabraves*/
 
-    .coreSpriteSpeechBubbleSmall,
-    svg[aria-label="Comment"] {
-        background-size: 26px!important;
-        padding-left: 29px!important;
-    }
 
     /* Explore _______________________________________________________________*/
 
