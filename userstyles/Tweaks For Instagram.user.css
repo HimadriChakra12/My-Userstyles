@@ -34,9 +34,6 @@
         display: none
     }
 
-    [style="padding-bottom: 133.333%;"] {
-        padding-bottom: 100% !important;
-    }
 
     /* Dark Scrollbar*/
     ::-webkit-scrollbar,
@@ -79,6 +76,22 @@
         /* display: none; */
         visibility: visible
     }
+    .Di7vw,
+    .a-input-text,
+    .pbgfb,
+    input,
+    input[type=email],
+    input[type=number],
+    input[type=password],
+    input[type=search],
+    input[type=tel],
+    input[type=text],
+    select,
+    textarea {
+        background-color: #1d0909!important;
+        border-radius: 22px!important;
+        color: #fff!important;
+    }
     .Ckrof,
     .v1Nh3,
     ._41KYi{
@@ -97,7 +110,7 @@
     img{
         -webkit-box-reflect: below 0 -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(70%, transparent), to(rgba(250, 250, 250, 0.1)));
     }
-
+    
     svg[aria-label="Instagram"] {
         background: url(https://i.ibb.co/YQ5F02g/Instagram.png) no-repeat!important;
         box-sizing: border-box;
@@ -225,49 +238,5 @@
     [src="https://instagram.fman2-2.fna.fbcdn.net/v/t51.2885-19/44884218_345707102882519_2446069589734326272_n.jpg?_nc_ht=instagram.fman2-2.fna.fbcdn.net&_nc_ohc=T--tU1Sh73YAX-IezzC&oh=40f9fa7e9f8aeeeb618647454526fa2c&oe=5EB875F1"] {
         background-size: 49px!important;
         padding-left: 50px!important;
-    }
-}
-
-@-moz-document url-prefix("https://www.instagram.com/direct/t") {
-
-
-    a.x1i10hfl.x1qjc9v5.xjbqb8w.xjqpnuy.xa49m3k.xqeqjp1.x2hbi6w.x13fuv20.xu3j5b3.x1q0q8m5.x26u7qi.x972fbf.xcfux6l.x1qhh985.xm0m39n.x9f619.x1ypdohk.xdl72j9.x2lah0s.xe8uvvx.x2lwn1j.xeuugli.x1n2onr6.x16tdsg8.x1hl2dhg.xggy1nq.x1ja2u2z.x1t137rt.x1q0g3np.x87ps6o.x1lku1pv.x1a2a7pz.x168nmei.x13lgxp2.x5pf9jr.xo71vjh.x1lliihq.xdj266r.x11i5rnm.xat24cr.x1mh8g0r.xg6hnt2.x18wri0h.x1l895ks.xbbxn1n.xxbr6pl.x1y1aw1k.xwib8y2:hover {
-        background-color: #ffffff20;
-    }
-    .x1k4qllp {
-        outline: 10px solid #0000;
-    }
-
-    .xyqdw3p {
-        background-image: none !important;
-    }
-
-    ::-webkit-scrollbar,
-    ::-webkit-scrollbar-corner,
-    ::-webkit-scrollbar,
-    ::-webkit-scrollbar-corner {
-        display: none!important;
-    }
-
-    ::-webkit-scrollbar-button,
-    ::-webkit-scrollbar-button {
-        display: none !important;
-    }
-
-    ::-webkit-scrollbar-thumb,
-    ::-webkit-scrollbar-thumb {
-        display: none !important;
-    }
-
-    ::-webkit-scrollbar-thumb:not(:active):hover,
-    ::-webkit-scrollbar-thumb:not(:active):hover {
-        display: none !important;
-    }
-
-    ::-webkit-scrollbar-thumb:active,
-    ::-webkit-scrollbar-thumb:hover:active,
-    ::-webkit-scrollbar-thumb:active,
-    ::-webkit-scrollbar-thumb:hover:active {
-        display: none !important;
     }
 }
