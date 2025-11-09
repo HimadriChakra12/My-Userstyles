@@ -25,23 +25,21 @@
 }
 
 /* hide yt sidebar */
-ytd-mini-guide-renderer, 
+/*ytd-mini-guide-renderer, 
 ytd-guide-renderer {
   display: none !important;
 }
 
 /* hide yt top bar */
 .ytd-masthead {
-  margin: 0 !important;
-  opacity: 0 !important;
+    opacity: 0 !important;
     height: 0 !important;
-    background: #0000 !important;
     transition: ease-in-out 0.2s
 }
 .ytd-masthead:active,
 .ytd-masthead:focus-within {
     height: 80px !important;
-  opacity: 1 !important;
+    opacity: 1 !important;
     backdrop-filter: blur(10pc) !important;
 }
 
