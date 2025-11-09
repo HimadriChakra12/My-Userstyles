@@ -9,68 +9,76 @@
 @-moz-document domain("www.youtube.com") {
     /* Insert code here... */
     /* cosmetic and focus tweaks for yt */
-/* credit to various userstyles makers for some pieces of this */
+    /* credit to various userstyles makers for some pieces of this */
 
 
-/* hide recs */
-#secondary {
-  display: none !important;
-}
+    /* hide recs */
+    #secondary {
+        display: none !important;
+    }
 
-/* make video fill the remaining space */
-#primary {
-    width: 100% !important;
-    flex: 1 !important;
-    max-width: none !important;
-}
+    /* make video fill the remaining space */
+    #primary {
+        width: 100% !important;
+        flex: 1 !important;
+        max-width: none !important;
+    }
 
-/* hide yt sidebar */
-/*ytd-mini-guide-renderer, 
-ytd-guide-renderer {
-  display: none !important;
-}
-
-/* hide yt top bar */
-.ytd-masthead {
+    /* hide yt sidebar */
+    /*ytd-mini-guide-renderer, 
+    ytd-guide-renderer {
+        display: none !important;
+    }
+    */
+    ytd-mini-guide-renderer, 
+    ytd-guide-renderer {
+        background: #252525de !important;
+        backdrop-filter: blur(10px)
+    }
+    /* hide yt top bar */
+    .ytd-masthead:not(yt-icon-button[id="guide-button"]) {
     opacity: 0 !important;
     height: 0 !important;
     transition: ease-in-out 0.2s
 }
-.ytd-masthead:active,
-.ytd-masthead:focus-within {
+    yt-icon{
+        display: none
+    }
+    .ytd-masthead:active,
+    .ytd-masthead:focus-within {
     height: 80px !important;
     opacity: 1 !important;
     backdrop-filter: blur(10pc) !important;
 }
 
-/* remove extra padding and ensure content is full-width on channel page*/
-.ytd-app {
-  margin-top: 0 !important;
-  padding-top: 0 !important;
-  margin-left: 0 !important;
-}
+    /* remove extra padding and ensure content is full-width on channel page*/
+    .ytd-app {
+        margin-top: 0 !important;
+        padding-top: 0 !important;
+        margin-left: 0 !important;
+    }
 
-html:not(.ytd-watch-flexy) ytd-watch-flexy[flexy] #player {
-  width: 100% !important;
-  max-width: 1400px;
-  margin: 0 auto !important;
-}
+    html:not(.ytd-watch-flexy) ytd-watch-flexy[flexy] #player {
+        width: 100% !important;
+        max-width: 1400px;
+        margin: 0 auto !important;
+    }
 
-/* remove that annoying thing yt adds in dark mode */
-.ytp-gradient-bottom {
-  display: none !important;
-}
+    /* remove that annoying thing yt adds in dark mode */
+    .ytp-gradient-bottom {
+        display: none !important;
+    }
 
-/* reshape some elements */
-.chip-container {
-  border-radius: 0% !important;
-}
+    /* reshape some elements */
+    .chip-container {
+        border-radius: 0% !important;
+    }
 
-.ytd-thumbnail {
-  border-radius: 10% !important;
-}
+    .ytd-thumbnail {
+        border-radius: 10% !important;
+    }
 
-.yt-spec-avatar-shape__image {
-  border-radius: 10% !important;
-}
+    .yt-spec-avatar-shape__image {
+        border-radius: 10% !important;
+    }
 }
