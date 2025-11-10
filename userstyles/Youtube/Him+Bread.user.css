@@ -27,29 +27,24 @@
     /* hide yt sidebar */
     /*ytd-mini-guide-renderer, 
     ytd-guide-renderer {
-        display: none !important;
-    }
-    */
-    ytd-mini-guide-renderer, 
-    ytd-guide-renderer {
-        background: #252525de !important;
-        backdrop-filter: blur(10px)
-    }
-    /* hide yt top bar */
-    .ytd-masthead:not(yt-icon-button[id="guide-button"]) {
-    opacity: 0 !important;
-    height: 0 !important;
-    transition: ease-in-out 0.2s
-}
+    display: none !important;
+}*/
     yt-icon{
-        display: none
+        display: none  
+    }
+
+    /* hide yt top bar */
+    .ytd-masthead {
+        opacity: 0 !important;
+        height: 0 !important;
+        transition: ease-in-out 0.2s
     }
     .ytd-masthead:active,
     .ytd-masthead:focus-within {
-    height: 80px !important;
-    opacity: 1 !important;
-    backdrop-filter: blur(10pc) !important;
-}
+        height: 80px !important;
+        opacity: 1 !important;
+        backdrop-filter: blur(10pc) !important;
+    }
 
     /* remove extra padding and ensure content is full-width on channel page*/
     .ytd-app {
@@ -80,5 +75,8 @@
 
     .yt-spec-avatar-shape__image {
         border-radius: 10% !important;
+    }
+    div[id="dismissible"]{
+        display: none !important;
     }
 }
