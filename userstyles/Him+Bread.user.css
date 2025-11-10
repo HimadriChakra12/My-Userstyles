@@ -36,7 +36,6 @@ ytd-guide-renderer {
     height: 0 !important;
     transition: ease-in-out 0.2s
 }
-.ytd-masthead:active,
 .ytd-masthead:focus-within {
     height: 80px !important;
     opacity: 1 !important;
