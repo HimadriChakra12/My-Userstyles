@@ -37,9 +37,9 @@
     .ytd-masthead {
         opacity: 0 !important;
         height: 0 !important;
-        transition: ease-in-out 0.2s
+        transition: ease-in-out 0.2s;
+        margin-bottom: 10px 
     }
-    .ytd-masthead:active,
     .ytd-masthead:focus-within {
         height: 80px !important;
         opacity: 1 !important;
@@ -77,3 +77,22 @@
         border-radius: 10% !important;
     }
 }
+
+@-moz-document regexp("^https://www\\.youtube\\.com/playlist.*$") {
+    /* Insert code here... */
+    ytd-two-column-browse-results-renderer[class="style-scope ytd-browse grid grid-disabled"]{
+        width: 90vw !important;      
+        margin-left: 40px !important;
+    }
+    div[class="yt-page-header-view-model__page-header-background"],
+    yt-content-preview-image-view-model[class="yt-page-header-view-model__page-header-headline-image yt-page-header-view-model__page-header-headline-image--page-header-headline-image-hero ytContentPreviewImageViewModelHost ytContentPreviewImageViewModelLargeRoundedImage"]{
+        display: none
+    }
+    div[id="contents"]{
+        margin-left: 10px
+    }
+    ytd-alert-with-button-renderer{
+        background: #0000 !important
+    }
+}
+
