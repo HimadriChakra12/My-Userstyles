@@ -76,7 +76,4 @@
     .yt-spec-avatar-shape__image {
         border-radius: 10% !important;
     }
-    div[id="dismissible"]{
-        display: none !important;
-    }
 }
