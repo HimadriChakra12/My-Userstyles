@@ -1,4 +1,4 @@
-id="wrapper"/* ==UserStyle==
+/* ==UserStyle==
 @name           Him-bread tweak
 @namespace      github.com/openstyles/stylus
 @version        1.0.0
@@ -14,9 +14,12 @@ id="wrapper"/* ==UserStyle==
 
     /* hide recs */
     #secondary {
-        display: none !important;
+        /*display: non !important;*/
     }
-
+       #related {
+           display: none;
+           margin-left: 50px !important;
+       }
     /* make video fill the remaining space */
     #primary {
         width: 100% !important;
