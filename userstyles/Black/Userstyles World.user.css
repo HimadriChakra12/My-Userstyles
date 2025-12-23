@@ -1,0 +1,140 @@
+/* ==UserStyle==
+@name         UserStyles.world Black
+@version      3.0.1
+@namespace    userstyles.world/user/him
+@description  Dark theme for UserStyles.world based on the Black palette.
+@author       Him
+@license      No License
+==/UserStyle== */
+
+@-moz-document domain("userstyles.world") {
+:root {
+	/* Black color scheme */
+	--Black0    : #2e3440;
+	--Black1    : #3b4252;
+	--Black2    : #111;
+	--Black3    : #000;
+	--Black4    : #d1d1d1; 
+	--Black5    : #939393;
+	--Black6    : #a9a9a9;
+	--Black7    : #999;
+	--Black8    : #6f6f6f;
+	--Black9    : #9e9e9e;
+	--Black10   : #6c6c6c;
+	--Black11   : #bf616a;
+	--Black12   : #d08770;
+	--Black13   : #ebcb8b;
+	--Black14   : #a3be8c;
+	--Black15   : #9e9e9e;
+	--BlackBlack: #fff;
+	--BlackInactive: #fff;
+    --rgbBlack0   : 46,52,64;
+    --rgbBlack1   : 59,66,82;
+    --rgbBlack2   : 67,76,94;
+    --rgbBlack3   : 76,86,106;
+    --rgbBlack4   : 216,222,233;
+    --rgbBlack5   : 229.233.240;
+    --rgbBlack6   : 236,239,244;
+    --rgbBlack7   : 143,188,187;
+    --rgbBlack8   : 136,192,208;
+    --rgbBlack9   : 129,161,193;
+    --rgbBlack10  : 94,129,172;
+    --rgbBlack11  : 191,97,106;
+    --rgbBlack12  : 208,135,112;
+    --rgbBlack13  : 235,203,139;
+    --rgbBlack14  : 163,190,140;
+    --rgbBlack15  : 180,142,173;
+    --rgbBlackBlack: 37,41,50;
+    --rgbBlackInactive: 155,158,164;
+    --trans : #0000;
+        --grey: #434343;
+}
+
+html, body,
+form:not(.Form).search input, form:not(.Form).search button {
+    background-color: #000 !important;
+    color: var(--Black4) !important;
+    scrollbar-color: var(--grey) var(--trans);
+	border-color: #000;
+	filter: grayscale(20%);
+    scrollbar-width: thin;
+}
+	#share{
+		border: 0
+	}
+nav, .Box, .Footer, .chart, .Pagination,
+form:not(.Form), .Form-box,
+pre, .md code {
+    background-color: #000 !important;
+}
+.Pagination-active {
+    background-color: var(--Black1);
+}
+.Pagination-button:hover, .Pagination-button:focus {
+    background-color: var(--Black3);
+}
+input, textarea,
+.Form-box input, .Form-box textarea, .Form-box select {
+    background-color: var(--Black1);
+}
+.btn.primary {
+    background-color: var(--Black10);
+}
+
+.bg\:2, .card, .btn {
+    background-color: #000;
+    color: var(--Black4) !important;
+	border-color: #000;
+}
+
+.fg\:3, .fg\:4 {
+    color: var(--BlackInactive);
+}
+a, .fg\:1 {
+    color: var(--Black10) !important;
+	background-color: black
+}
+nav a, .Pagination-button {
+    color: var(--Black4) !important;
+}
+
+.chart svg[viewBox] .bg {
+    fill: var(--BlackBlack);
+}
+.chart svg[viewBox] > path[style*="fill:rgba(255"] {
+    fill: var(--Black1) !important;
+}
+.chart svg[viewBox] > text {
+    fill: var(--Black4) !important;
+}
+
+.rating.score-1 svg {
+    stroke: var(--Black11);
+}
+.rating.score-2 svg {
+    stroke: var(--Black12);
+}
+.rating.score-3 svg {
+    stroke: var(--Black13);
+}
+.rating.score-4 svg, .rating.score-5 svg {
+    stroke: var(--Black14);
+}
+    .navbar:hover{
+       
+        transition: .5s ease-in-out;
+        top: 0px;
+        border-color: #000
+    }
+	.navbar{
+		
+		top: -60px;
+		border-color: #fff;
+		position: fixed;
+        left: 50%;
+        transform: translate(-50%, 10%);
+		border-radius: 10px;
+        width: calc(60% + 5px)
+		
+	}
+}
