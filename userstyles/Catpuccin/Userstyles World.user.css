@@ -1,0 +1,114 @@
+/* ==UserStyle==
+@name         UserStyles.world Catpuccin
+@version      20220426.16.34
+@namespace    userstyles.world/user/him
+@description  Dark theme for UserStyles.world based on the Catpuccin palette.
+@author       Him
+@license      No License
+==/UserStyle== */
+
+@-moz-document domain("userstyles.world") {
+:root {
+	/* Catpuccin color scheme */
+	--Catpuccin0    : #2e3440;
+	--Catpuccin1    : #3b4252;
+	--Catpuccin2    : #434c5e;
+	--Catpuccin3    : #4c566a;
+	--Catpuccin4    : #d8dee9;
+	--Catpuccin5    : #e5e9f0;
+	--Catpuccin6    : #eceff4;
+	--Catpuccin7    : #8fbcbb;
+	--Catpuccin8    : #88c0d0;
+	--Catpuccin9    : #81a1c1;
+	--Catpuccin10   : #5e81ac;
+	--Catpuccin11   : #bf616a;
+	--Catpuccin12   : #d08770;
+	--Catpuccin13   : #ebcb8b;
+	--Catpuccin14   : #a3be8c;
+	--Catpuccin15   : #b48ead;
+	--CatpuccinBlack: #252932;
+	--CatpuccinInactive: #9b9ea4;
+    --rgbCatpuccin0   : 46,52,64;
+    --rgbCatpuccin1   : 59,66,82;
+    --rgbCatpuccin2   : 67,76,94;
+    --rgbCatpuccin3   : 76,86,106;
+    --rgbCatpuccin4   : 216,222,233;
+    --rgbCatpuccin5   : 229.233.240;
+    --rgbCatpuccin6   : 236,239,244;
+    --rgbCatpuccin7   : 143,188,187;
+    --rgbCatpuccin8   : 136,192,208;
+    --rgbCatpuccin9   : 129,161,193;
+    --rgbCatpuccin10  : 94,129,172;
+    --rgbCatpuccin11  : 191,97,106;
+    --rgbCatpuccin12  : 208,135,112;
+    --rgbCatpuccin13  : 235,203,139;
+    --rgbCatpuccin14  : 163,190,140;
+    --rgbCatpuccin15  : 180,142,173;
+    --rgbCatpuccinBlack: 37,41,50;
+    --rgbCatpuccinInactive: 155,158,164;
+}
+
+html, body,
+form:not(.Form).search input, form:not(.Form).search button {
+    background-color: #1F1F2F !important;
+    color: var(--Catpuccin4) !important;
+    scrollbar-color: var(--Catpuccin1) var(--CatpuccinBlack);
+}
+nav, .Box, .Footer, .chart, .Pagination,
+form:not(.Form), .Form-box,
+pre, .md code {
+    background-color: #1B1923 !important;
+}
+.Pagination-active {
+    background-color: var(--Catpuccin1);
+}
+.Pagination-button:hover, .Pagination-button:focus {
+    background-color: var(--Catpuccin3);
+}
+input, textarea,
+.Form-box input, .Form-box textarea, .Form-box select {
+    background-color: var(--Catpuccin1);
+}
+.btn.primary {
+    background-color: var(--Catpuccin10);
+}
+
+.bg\:2, .card, .btn {
+    background-color: #1B1923;
+    color: var(--Catpuccin4) !important;
+	border: white
+}
+
+.fg\:3, .fg\:4 {
+    color: var(--CatpuccinInactive);
+}
+a, .fg\:1 {
+    color: var(--Catpuccin10) !important;
+}
+nav a, .Pagination-button {
+    color: var(--Catpuccin4) !important;
+}
+
+.chart svg[viewBox] .bg {
+    fill: var(--CatpuccinBlack);
+}
+.chart svg[viewBox] > path[style*="fill:rgba(255"] {
+    fill: var(--Catpuccin1) !important;
+}
+.chart svg[viewBox] > text {
+    fill: var(--Catpuccin4) !important;
+}
+
+.rating.score-1 svg {
+    stroke: var(--Catpuccin11);
+}
+.rating.score-2 svg {
+    stroke: var(--Catpuccin12);
+}
+.rating.score-3 svg {
+    stroke: var(--Catpuccin13);
+}
+.rating.score-4 svg, .rating.score-5 svg {
+    stroke: var(--Catpuccin14);
+}
+}
