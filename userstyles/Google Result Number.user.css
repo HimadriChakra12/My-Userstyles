@@ -1,0 +1,90 @@
+/* ==UserStyle==
+@name           Google Result Number (Multi-service) FIXED 9/2022
+@namespace      userstyles.world/user/him
+@author         Him
+@description    Inserts a numbering/counter before the Google results to see the result number more easily.`
+@version        1
+==/UserStyle== */
+
+@-moz-document domain("google.de") {
+    body {
+      counter-reset: result !important;
+    }
+    /* previously: jtfYYd */
+    div.MjjYud:before {
+      position:relative !important;
+      margin:0px 0px 0px -25px !important;
+      color:#45d3ff;
+      font-weight:bold;
+      font-size:12px;
+      content: counter(result) ". " !important;
+      counter-increment: result !important;
+    }
+}
+
+@-moz-document domain("google.com") {
+    body {
+      counter-reset: result !important;
+    }
+    /* previously: jtfYYd */
+    div.MjjYud:before {
+      position:relative !important;
+      margin:0px 0px 0px -25px !important;
+      color:#45d3ff;
+      font-weight:bold;
+      font-size:12px;
+      content: counter(result) ". " !important;
+      counter-increment: result !important;
+    }
+}
+
+@-moz-document domain("google.at") {
+    /* by takku, Fixes by Lestarte.com. Last Update 12.09.2022 */
+    body {
+      counter-reset: result !important;
+    }
+    /* previously: jtfYYd */
+    div.MjjYud:before {
+      position:relative !important;
+      margin:0px 0px 0px -25px !important;
+      color:#45d3ff;
+      font-weight:bold;
+      font-size:12px;
+      content: counter(result) ". " !important;
+      counter-increment: result !important;
+    }
+}
+
+@-moz-document domain("google.co.uk") {
+    /* by takku, Fixes by Lestarte.com. Last Update 12.09.2022 */
+    body {
+      counter-reset: result !important;
+    }
+    /* previously: jtfYYd */
+    div.MjjYud:before {
+      position:relative !important;
+      margin:0px 0px 0px -25px !important;
+      color:#45d3ff;
+      font-weight:bold;
+      font-size:12px;
+      content: counter(result) ". " !important;
+      counter-increment: result !important;
+    }
+}
+
+@-moz-document domain("google.it") {
+    /* by takku, Fixes by Lestarte.com. Last Update 12.09.2022 */
+    body {
+      counter-reset: result !important;
+    }
+    /* previously: jtfYYd */
+    div.MjjYud:before {
+      position:relative !important;
+      margin:0px 0px 0px -25px !important;
+      color:#45d3ff;
+      font-weight:bold;
+      font-size:12px;
+      content: counter(result) ". " !important;
+      counter-increment: result !important;
+    }
+}
