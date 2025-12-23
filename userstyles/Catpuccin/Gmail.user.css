@@ -1,0 +1,125 @@
+/* ==UserStyle==
+@name           Modern Catpuccin Gmail 
+@namespace      userstyles.world/user/him
+@version        1.0.0
+@description    A new userstyle
+@author         Him
+==/UserStyle== */
+
+@-moz-document domain("mail.google.com"){
+tbody{
+    background-color:#8c8c8c00;
+}
+tr[role=tablist], .zo, .aeH, .ls, .aeU, .ae3, .aeV, .gb_zc, .zo , .gb_yc,.gb_z.gb_gd.gb_f.gb_zf,.tboyd -webkit-scrollbar{
+    display:none;
+}
+}
+
+
+.zA {
+    background:#24273A!important;
+    border:none!important;
+    border-radius:10px!important;
+    margin-top:10px!important;
+	color: #9baeda
+}
+.aKh {
+    border-top-left-radius:5px!important;
+    border-top-right-radius:5px!important;
+}
+.bAt, .AO, .if, .aeJ {
+    border-radius:5px!important;
+}
+.a9q.pH{
+background-image: url(https://img.icons8.com/office/344/pin-2.png)!important;
+}
+.a9q{
+background-image: url(https://img.icons8.com/windows/344/pin-2.png)!important;
+}
+.aHS-bns .qj{
+background-image: url(https://img.icons8.com/office/344/pin-2.png)!important;
+}
+#aso_search_form_anchor{
+	position: relative;
+	top: 0%;
+	left: 18%;
+	width: 10000px;
+	background-color: #bfbfbf1f;
+	border-radius: 5px;
+	color: white
+}
+.gssb_f{
+	border-radius: 10px;
+}
+.gssb_e{
+	position: absolute;
+	top: 500%;
+	border-radius: 10px;
+	border: thick;
+	border-color: black;
+	background-color: #234a96;
+}
+.nH .ar4.z, .at{
+	border-radius: 5px;
+	background-color: #132335;
+}
+.nH .bkK{
+	color: #9f9f9f
+}
+.aqe, .aSP, .HW .H0 .H2, .gssb_f{
+	background-color: #e5e0e0;
+	color: white
+}
+@-moz-document url-prefix("https://mail.google.com/") {
+
+
+/* width */
+::-webkit-scrollbar {
+    width: 2px !important;
+    border-radius: 100px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: none !important;
+    border-radius: 10px !important;
+    background: #e9eaf900 !important;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #c1e7ff00 !important;
+    border-radius: 100px !important;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #c1e7ff00 !important;
+    border-radius: 100px !important;
+}
+
+form.aJf {
+    background-color: #c1e7ff00;
+    border-radius: 16px;
+}
+
+.TK .TO.nZ:active,
+.TK .TO.ol:active,
+.TK .TO.nZ,
+.TK .TO.ol,
+.byl .TK .nZ.aBP,
+.byl .TK .nZ.aS3,
+.byl .TK .nZ.aS4,
+.byl .TK .nZ.aS5,
+.byl .TK .nZ.aS6 {
+    background-color: #c1e7ff00;
+    border-radius: 0 16px 16px 0;
+    padding: 13px 0px;
+}
+
+.aim > div {
+    border-radius: 0 16px 16px 0;
+    padding: 13px 0px;
+    margin: 5px 0;
+}
+}
