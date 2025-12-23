@@ -1,0 +1,23 @@
+/* ==UserStyle==
+@name           Google Topbar Autohide
+@namespace      github.com/openstyles/stylus
+@version        1.0.0
+@description    A new userstyle
+@author         Me
+==/UserStyle== */
+
+@-moz-document domain("www.google.com") {
+    /* Insert code here... */
+	.LX3sZb {
+    display: inline-block;
+    flex-grow: 1;
+    max-width: 100px;
+    transition: 1s;
+    border-radius: 20px;
+}
+
+.LX3sZb:hover {
+    max-width: 399px;
+    transition: 2s;
+}
+}
