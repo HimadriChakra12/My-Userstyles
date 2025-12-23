@@ -1,0 +1,223 @@
+/* ==UserStyle==
+@name           Modern Painfree Gmail 
+@namespace      userstyles.world/user/him
+@version        1.0.0
+@description    A new userstyle
+@author         Him
+==/UserStyle== */
+
+@-moz-document domain("mail.google.com"){
+tbody{
+    background-color:#8c8c8c00;
+}
+tr[role=tablist], .zo, .aeH, .ls, .aeU, .ae3, .aeV, .gb_zc, .zo , .gb_yc,.gb_z.gb_gd.gb_f.gb_zf,.tboyd -webkit-scrollbar{
+    display:none;
+}
+}
+
+.zA {
+    background:rgba(255, 255, 255, 0.57)!important;
+    border:none!important;
+    border-radius:10px!important;
+    margin-top:10px!important;
+}
+.aKh {
+    border-top-left-radius:10px!important;
+    border-top-right-radius:10px!important;
+}
+.bAt, .AO, .if, .aeJ {
+    border-radius:20px!important;
+}
+.a9q.pH{
+background-image: url(https://img.icons8.com/office/344/pin-2.png)!important;
+}
+.a9q{
+background-image: url(https://img.icons8.com/windows/344/pin-2.png)!important;
+}
+.aHS-bns .qj{
+background-image: url(https://img.icons8.com/office/344/pin-2.png)!important;
+}
+@-moz-document url-prefix("https://mail.google.com/") {
+a,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+button,
+div,
+span,
+yt-formatted-string {
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 2px !important;
+    border-radius: 100px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: none !important;
+    border-radius: 10px !important;
+    background: #e9eaf900 !important;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #c1e7ff00 !important;
+    border-radius: 100px !important;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #c1e7ff00 !important;
+    border-radius: 100px !important;
+}
+
+form.aJf {
+    background-color: #c1e7ff00;
+    border-radius: 16px;
+}
+
+.TK .TO.nZ:active,
+.TK .TO.ol:active,
+.TK .TO.nZ,
+.TK .TO.ol,
+.byl .TK .nZ.aBP,
+.byl .TK .nZ.aS3,
+.byl .TK .nZ.aS4,
+.byl .TK .nZ.aS5,
+.byl .TK .nZ.aS6 {
+    background-color: #c1e7ff00;
+    border-radius: 0 16px 16px 0;
+    padding: 13px 0px;
+}
+
+.aim > div {
+    border-radius: 0 16px 16px 0;
+    padding: 13px 0px;
+    margin: 5px 0;
+}
+
+div.aAw.FgKVne > span {
+    color: #4284f4;
+}
+
+.zA {
+    padding: 19px 10px !important;
+    margin-bottom: 8px;
+    margin-top: 8px;
+    border-radius: 16px;
+    width: 95%;
+    margin-left: 1.5%;
+}
+
+
+.zA:hover {
+
+    background: #c0e7ff !important;
+}
+
+.gb_zc {
+    background: #c0e7ff;
+    border-radius: 10px;
+    margin-right: 40px;
+}
+
+.gb_oa svg,
+.gb_Fc svg,
+.gb_2c .gb_4d,
+.gb_Rc .gb_4d {
+    color: #0957d0;
+    opacity: 1;
+}
+
+.J-M {
+    background: #c0e7ff;
+    border-radius: 16px;
+    top: 115px !important;
+}
+
+div.EHzcec.eejsDc {
+    border-radius: 16px !important;
+}
+
+.bhZ:not(.bym) > .V3.aam.ada > .at9 > .Ls77Lb.aZ6 > .pp > div > .nM > .yJ > .ajl.aib.aZ6 > .wT > .n3 > .byl > .TK > .aim.ain > .TO.aBP.nZ.aiq {
+    border-radius: 10px;
+}
+
+.SK.ZF-zT {
+    margin-top: 10px;
+    border-radius: 16px;
+    background: #f2f6fc;
+}
+
+.boo .nr,
+.boo .nr:focus{
+    height: 40px !important;
+    background: #ffffff;
+    border-radius: 12px;
+    margin-top: 0px !important;
+    text-align: center;
+    font-size: 18px;
+}
+
+.boo .nr:focus {
+     background: #c0e7ff;
+}
+
+div.ZZ > div.w-Nw.boo {
+    margin-bottom: 30px;
+}
+
+span.ZG > label {
+    color: #000000;
+    font-size: 15px;
+}
+
+.T-I-atl {
+    font-size: 15px;
+    border-radius: 16px;
+    font-weight: 800;
+    height: 47px;
+    min-width: 92px;
+    background-color: #c0e7ff;
+    color: #000000;
+}
+
+.T-I-atl:hover {
+    font-size: 15px;
+    border-radius: 16px;
+    font-weight: 800;
+    height: 47px;
+    min-width: 92px;
+    background-color: #c1e7ff00;
+    color: #000000;
+    box-shadow: none;
+    border: 1px solid #0957d0;
+}
+
+.aQh, .aQj,div.aab.aP8 {
+    height: 40px;
+    background: #ffffff;
+    border-radius: 16px;
+    margin-left: 5px;
+}
+
+.aQh:hover, .aQj:hover {
+    background-color: #c0e7ff;
+}
+
+.aQj > div {
+    height: 40px;
+}
+
+div.T-axO.T-I.T-I-ax7.aQl.J-J5-Ji.J-JN-M-I:hover:before {
+   background: transparent;
+    box-shadow: none;
+}
+}
