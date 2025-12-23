@@ -1,0 +1,56 @@
+/* ==UserStyle==
+@name           Instagram & Threads Context Menu for Photos
+@namespace      github.com/openstyles/stylus
+@version        1.0.0
+@description    A new userstyle
+@author         Me
+==/UserStyle== */
+
+@-moz-document domain("www.instagram.com"), url-prefix("www.instagram.com/stories") {
+    /* Insert code here... */
+	.xseo6mj {
+    display: none;
+}
+	._ajdu {
+    margin-top: 0;
+    padding: 8px 0;
+    width: 1300px;
+}
+	._aagw{
+		display: none
+	}
+	.x1gan7if {
+    padding-bottom: 32px;
+    opacity: 0;
+		display: block
+}
+	.x1gan7if:hover{
+		transition: 1s ease-in-out;
+		opacity: 1
+	}
+	
+	.x1ey2m1c {
+    bottom: 0;
+    
+}
+
+	.__web-inspector-hide-shortcut__, .__web-inspector-hide-shortcut__ *, .__web-inspector-hidebefore-shortcut__::before, .__web-inspector-hideafter-shortcut__::after {
+    visibility: hidden !important;
+}
+}
+
+@-moz-document url-prefix("https://www.instagram.com/p/") {
+    /* Insert code here... */
+    div[class="x1i10hfl"]{
+        width: 150%;
+        position: relative;
+        right: 60%;
+    }
+}	
+
+@-moz-document domain("threads.net") {
+    /* Insert code here... */
+	.x47corl {
+    pointer-events: all;
+}
+}
