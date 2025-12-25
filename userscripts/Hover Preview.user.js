@@ -14,11 +14,11 @@
 
     // Configuration
     const CONFIG = {
-        hoverDelay: 800,              // Reduced from 1500ms for faster response
-        hideDelay: 500,               // Reduced for snappier feel
-        popupWidth: 0.75,             // 75% of window width
-        popupHeight: 0.75,            // 75% of window height
-        position: 'bottom-right',     // Options: 'bottom-right', 'bottom-left', 'top-right', 'top-left'
+        hoverDelay: 1000,              // Reduced from 1500ms for faster response
+        hideDelay: 300,               // Reduced for snappier feel
+        popupWidth: 0.85,             // 85% of window width (centered)
+        popupHeight: 0.85,            // 85% of window height (centered)
+        position: 'center',           // Center position with backdrop
         excludeExtensions: [          // File types to ignore
             'zip', 'rar', '7z', 'tar', 'gz',
             'exe', 'dmg', 'pkg', 'deb', 'rpm',
@@ -31,9 +31,7 @@
         ],
         showLoadingIndicator: true,
         enableKeyboardShortcut: true, // ESC to close preview
-        toggleKey: 'F2',              // Key to toggle script on/off (F2, F3, F4, etc.)
-        requireModifier: true,        // Require holding Ctrl/Cmd while hovering
-        modifierKey: 'ctrlKey',       // Options: 'ctrlKey', 'altKey', 'shiftKey'
+        toggleKey: 'F2',              // Key to toggle script on/off
         startEnabled: false           // Start with script disabled (toggle on with F2)
     };
 
@@ -45,6 +43,7 @@
         hideTimer: null,
         isOverPopup: false,
         popup: null,
+        backdrop: null,           // Backdrop overlay
         iframe: null,
         observer: null,
         enabled: CONFIG.startEnabled,  // Track if script is enabled
@@ -81,16 +80,6 @@
             }
         },
 
-        getPopupPosition() {
-            const positions = {
-                'bottom-right': { right: '12px', bottom: '12px' },
-                'bottom-left': { left: '12px', bottom: '12px' },
-                'top-right': { right: '12px', top: '12px' },
-                'top-left': { left: '12px', top: '12px' }
-            };
-            return positions[CONFIG.position] || positions['bottom-right'];
-        },
-
         debounce(func, wait) {
             let timeout;
             return function executedFunction(...args) {
@@ -108,6 +97,24 @@
     const popup = {
         create() {
             if (state.popup) return;
+
+            // Create backdrop overlay
+            state.backdrop = document.createElement('div');
+            state.backdrop.id = 'hover-preview-backdrop';
+            Object.assign(state.backdrop.style, {
+                position: 'fixed',
+                top: '0',
+                left: '0',
+                width: '100vw',
+                height: '100vh',
+                backgroundColor: 'rgba(0, 0, 0, 0.85)',
+                backdropFilter: 'blur(8px)',
+                WebkitBackdropFilter: 'blur(8px)',
+                zIndex: '2147483646',
+                display: 'none',
+                opacity: '0',
+                transition: 'opacity 0.3s ease'
+            });
 
             // Create container
             state.popup = document.createElement('div');
@@ -142,30 +149,42 @@
                 this.scheduleHide();
             });
 
+            // Click backdrop to close
+            state.backdrop.addEventListener('click', (e) => {
+                if (e.target === state.backdrop) {
+                    state.currentLink = null;
+                    this.hide();
+                }
+            });
+
             // Add loading event listeners
             state.iframe.addEventListener('load', () => {
                 loader.style.display = 'none';
             });
 
+            document.body.appendChild(state.backdrop);
             document.body.appendChild(state.popup);
         },
 
         applyStyles() {
-            // Popup container styles
-            const position = utils.getPopupPosition();
+            // Popup container styles - centered
             Object.assign(state.popup.style, {
                 position: 'fixed',
-                ...position,
+                top: '50%',
+                left: '50%',
+                transform: 'translate(-50%, -50%)',
                 width: `${window.innerWidth * CONFIG.popupWidth}px`,
                 height: `${window.innerHeight * CONFIG.popupHeight}px`,
                 zIndex: '2147483647',
                 display: 'none',
                 backgroundColor: '#ffffff',
-                border: '2px solid #333',
-                borderRadius: '8px',
-                boxShadow: '0 8px 32px rgba(0, 0, 0, 0.3)',
+                border: 'none',
+                borderRadius: '12px',
+                boxShadow: '0 20px 60px rgba(0, 0, 0, 0.5)',
                 overflow: 'hidden',
-                fontFamily: 'system-ui, -apple-system, sans-serif'
+                fontFamily: 'system-ui, -apple-system, sans-serif',
+                opacity: '0',
+                transition: 'opacity 0.3s ease'
             });
 
             // Iframe styles
@@ -202,12 +221,28 @@
                 state.iframe.src = link.href;
             }
 
+            // Show backdrop and popup with animation
+            state.backdrop.style.display = 'block';
             state.popup.style.display = 'block';
+
+            // Trigger animation
+            requestAnimationFrame(() => {
+                state.backdrop.style.opacity = '1';
+                state.popup.style.opacity = '1';
+            });
         },
 
         hide() {
             if (state.popup) {
-                state.popup.style.display = 'none';
+                // Fade out animation
+                state.backdrop.style.opacity = '0';
+                state.popup.style.opacity = '0';
+
+                // Hide after animation completes
+                setTimeout(() => {
+                    if (state.backdrop) state.backdrop.style.display = 'none';
+                    if (state.popup) state.popup.style.display = 'none';
+                }, 300);
             }
         },
 
@@ -228,11 +263,6 @@
         handleMouseEnter(event) {
             // Check if script is enabled
             if (!state.enabled) {
-                return;
-            }
-
-            // Check if modifier key is required and being held
-            if (CONFIG.requireModifier && !event[CONFIG.modifierKey]) {
                 return;
             }
 
@@ -321,15 +351,8 @@
         updateText() {
             if (!state.statusIndicator) return;
 
-            const modifierName = CONFIG.modifierKey === 'ctrlKey' ? 'Ctrl' :
-                                CONFIG.modifierKey === 'altKey' ? 'Alt' : 'Shift';
-
             if (state.enabled) {
-                if (CONFIG.requireModifier) {
-                    state.statusIndicator.textContent = `Hover Preview: ON (${modifierName}+Hover)`;
-                } else {
-                    state.statusIndicator.textContent = 'Hover Preview: ON';
-                }
+                state.statusIndicator.textContent = 'Hover Preview: ON';
                 state.statusIndicator.style.backgroundColor = '#4CAF50';
             } else {
                 state.statusIndicator.textContent = `Hover Preview: OFF (${CONFIG.toggleKey} to enable)`;
@@ -441,11 +464,6 @@
 
         console.log('Hover Preview Enhanced initialized');
         console.log(`Toggle with ${CONFIG.toggleKey} key`);
-        if (CONFIG.requireModifier) {
-            const modName = CONFIG.modifierKey === 'ctrlKey' ? 'Ctrl' :
-                           CONFIG.modifierKey === 'altKey' ? 'Alt' : 'Shift';
-            console.log(`Hold ${modName} while hovering to activate`);
-        }
     }
 
     // Start when DOM is ready
