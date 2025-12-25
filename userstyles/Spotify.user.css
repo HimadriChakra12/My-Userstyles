@@ -1,0 +1,384 @@
+/* ==UserStyle==
+@name           open.spotify.com
+@namespace      github.com/openstyles/stylus
+@version        1.0.0
+@description    A new userstyle
+@author         Me
+@preprocessor   stylus
+
+@var checkbox hide_uname "HIDE USERNAME" 0
+@var checkbox hide_recs "HIDE RECOMMENDATIONS" 0
+@var checkbox hide_spCon_bottom "HIDE 'PLAYING ON'" 0
+@var checkbox simple_sidebar "SIMPLIFIED SIDEBAR" 0
+@var checkbox hide_footer "HIDE FOOTER" 1
+@var select hide_sb "SCROLLBAR MODE" {"use_theme:THEMED": "styled", "spotify:DEFAULT": "spotify", "hidden:HIDDEN": "hidden"}
+@var checkbox use_custom_theme_color "USE CUSTOM COLORS" 1
+@var color custom_theme_color "CT: ACCENT COLOUR" #9b6ef4
+@var color ct_active_song "CT: ACTIVE TRACK COLOUR" #1c1e26
+
+==/UserStyle== */
+@-moz-document url-prefix("https://open.spotify.com/") {
+    @font-face {
+        font-family: "Torus";
+        src: url("https://files.catbox.moe/88ntnj.otf");
+    }
+
+    * {
+        font-family: "Torus", sans-serif!important;
+    }
+
+    @keyframes gay {
+        0% {
+            filter: hue-rotate(0deg)
+        }
+        100% {
+            filter: hue-rotate(360deg)
+        }
+    }
+
+    /*   Spotify Web Player   */
+    /* Hide premium promotions */
+    .html,
+    .spotify__container--is-web {
+        overflow-x: hidden!important
+    }
+    .Upqw01TOXETOmR5Td7Dj,
+    .eCtSle,
+    .Foyk_HJx16yh22JYmQ56 .ATUzFKub89lzvkmvhpyE {
+        display: none
+    }
+
+    .InvalidDropTarget .ATUzFKub89lzvkmvhpyE,
+    .b2KVTiBUcXV1kT0OjL2p .ATUzFKub89lzvkmvhpyE {
+        transition: all 1s;
+    }
+    .InvalidDropTarget .ATUzFKub89lzvkmvhpyE:hover,
+    .b2KVTiBUcXV1kT0OjL2p:hover .ATUzFKub89lzvkmvhpyE:hover {
+        transition: all 1s;
+    }
+
+    if hide_sb==hidden {
+        .os-scrollbar-vertical {
+            display: none
+        }
+    }
+    else {
+        .os-scrollbar-vertical {
+            width: 5px!important;
+            border-radius: 5px 5px!important
+        }
+
+        if hide_sb==styled {
+            .os-scrollbar-handle {
+                width: 5px!important;
+                border-radius: 5px 5px!important;
+
+                if use_custom_theme_color {
+                    background: custom_theme_color!important;
+                    filter: opacity(0.5)!important
+                }
+            }
+        }
+    }
+
+    /* Lyrics */
+    .e7eFLioNSG5PAi1qVFT4,
+    .gqaWFmQeKNYnYD5gRv3x,
+    ._Wna90no0o0dta47Heiw,
+    .nw6rbs8R08fpPn7RWW2w,
+    .SruqsAzX8rUtY2isUZDF,
+    .BXlQFspJp_jq9SKhUSP3,
+    .o4GE4jG5_QICak2JK_bn {
+        background: #000!important
+    }
+    
+    /* Hides sponsors */
+    .sponsor-text,
+    .sponsor-logo__image,
+    a.Button-sc-qlcn5g-0.heiitI.encore-text-body-small-bold {
+        display: none!important
+    }
+    
+    .eFyQzR {
+        display:none
+    }
+    
+    .mMx2LUixlnN_Fu45JpFB {
+            box-shadow: 0px 0px 0px 2px #ee96ac;
+}
+    .coBkWVskipFo8KxLKief {
+        background: #000!important
+    }
+    
+    /* Icons */
+    .bMBuKn path, .bjlVXn path, .cNvoOe path {
+        fill: black!important
+    }
+    
+     /* CONNECT TO DEVICE PANE */
+    .W3E0IT3_STcazjTeyOJa, .h0XG5HZ9x0lYV7JNwhoA  {
+        background: #000!important
+    }
+    
+    .tippy-arrow, .mkQEqlUoJ9kghcMfT49m .os-scrollbar,
+    .XiVwj5uoqqSFpS4cYOC6, .facDIsOQo9q7kiWc4jSg, .main-view-container__mh-footer-container,
+    .qSTDtICR1fiIGRni1cwy, .YIJxiTuPgMQav316cRqP,
+    .mjprSb2e1tKJpqwvgFSh, .XdJAEkP3WXzUL5URB0ZX 
+    {
+        color: #000!important
+    }
+    
+    /* Connected Device UI */
+    .qSTDtICR1fiIGRni1cwy, .YIJxiTuPgMQav316cRqP,
+    .mjprSb2e1tKJpqwvgFSh, .XdJAEkP3WXzUL5URB0ZX {
+        background: #000!important
+    }
+
+    .T1xI1RTSFU7Wu94UuvE6, .hIFR8WDm_54EEIa1gwpC {
+        filter: opacity(0)!important;
+        background: #000!important
+    }
+    
+    /* Foreground elements on the right sidebar */
+    .LunqxlFIupJw_Dkx6mNx,
+    .oaNVBli46GtVjaQKB15g, .qbOrWcMUhSri1nPkZLQA, 
+    .l2PpoXJouAgqFCuNT3iB, .QkOkUShDYWFx5Cz40Bcn,
+    .GTmlByXpJj7V6AwVq0Vk,
+    .Ai_McRq9wJEYK21w8nX_, .IgTMXVbZtqtZwu3GZASd{
+        background-color: #060606;
+    }
+
+    /* SIDEBAR */
+    .tUwyjggD2n5KvEtP5z1B, .Ozitxbqs1vcOukDz3GDw {
+        background: #060606!important
+    }
+    
+    /* CONTEXT MENUS */
+    #context-menu,
+    button.wC9sIed7pfp47wZbmU6m,
+    .SboKmDrCTZng7t4EgNoM, .encore-dark-theme, .NbcaczStd8vD2rHWwaKv  {
+        background: #000!important
+    }
+
+    button.wC9sIed7pfp47wZbmU6m:hover {
+        background: #000!important
+    }
+    
+    /* Hover Cards */
+    div[class*="CardButton-sc"]:hover {
+        background: #000!important;
+    }
+
+    /* PLAYER UI */
+    .OCY4jHBlCVZEyGvtSv0J {
+        background: hsl(227, 15%, 5%)!important
+    }
+    
+    .CoLO4pdSl8LGWyVZA00t {
+        background: linear-gradient(180deg, hsl(217, 18%, 0%) 0%, hsla(288, 14%, 7%, 0) 100%)!important
+    }
+        
+    .bk509U3ZhZc9YBJAmoPB,
+    .rsaJ_PD5Wsx9a9H2IyV_,
+    #context-menu,
+    .ErSD7TARZzk270zuVjoi,
+    .HVCCFeUiHVwZVv74p34a .os-viewport-native-scrollbars-invisible,
+    .hwP4Oum2PB76var(--gayTiming)b8jigI {
+        background: hsl(227, 15%, 6%)!important;
+    }
+    
+    if hide_uname {
+        .pudHk.MfVrtIzQJ7iZXfRWg6eM, .xQfpa, .Za_uNH8nTZ0qCuIqbPLZ span, .NO_VO3MRVl9z3z56d8Lg {
+            display:none
+        }
+        
+        .fEBgUb .MfVrtIzQJ7iZXfRWg6eM,
+        .RfdRTSGwulyQdDepLUTT {
+            filter: opacity(0)!important;
+            cursor: not-allowed;
+            pointer-events: none
+        }
+        .fhrvNw,
+        .CdHBSRh3RhPwBNIBQtkD,
+        .MF2rLXp4d_JPNs2t0bbj,
+        .kHu_FTRgoBLSLeAJtyKY,
+        .w3w0DS8atwcgOQJAKAV2,
+        .ta4ePOlmGXjBYPTd90lh {
+            filter: opacity(0)!important;
+        }
+        .G7zO58ORUHxcUw0sXktM {
+            filter: opacity(0)
+        }
+    }
+    
+    if use_custom_theme_color {
+        .kWONUS,
+        .dpREpp,
+        .QavgDs_52SpJ2rw0LNYz,
+        .fipMme,
+        .Ar1CZ7qjPHuIJY0cI56W .btn,
+        .iSbqnFdjb1SuyJ3uWydl .btn,
+        .h4HgbO_Uu1JYg5UGANeQ .btn,
+        .eSg4ntPU2KQLfpLGXAww .btn,
+        .lro6AjUrZFH6zxjmOGg0 .encore-bright-accent-set, .encore-bright-accent-set, .SPC4uzYXJmknkCGKpxHw path {
+            background-color: custom_theme_color!important;
+        }
+        .Ar1CZ7qjPHuIJY0cI56W .btn {
+            scale: 60%;
+            filter: grayscale(1)
+        }
+        .iSbqnFdjb1SuyJ3uWydl .btn,
+        .h4HgbO_Uu1JYg5UGANeQ .btn {
+            scale: 60%!important
+        }
+
+        .K7fGF95OD9aI3zdYnFXg path,
+        .ilmalU,
+        .Xmv2oAnTB85QE4sqbK00 path,
+        .RK45o6dbvO1mb0wQtSwq,
+        .GlueDropTarget--episodes .KAZD28usA1vPz5GVpm63,
+        .rRF_r7EyCHjZv058JACi path, .SPC4uzYXJmknkCGKpxHw path, .control-button-heart path, .volume-bar__icon-button .gQUQL, .NdVm10_yLWkkgq87jOMk path, .CCeu9OfWSwIAJqA49n84 path,
+        .iSbqnFdjb1SuyJ3uWydl .UIBT7E6ZYMcSDl1KL62g, 
+        .NTJM_mh36C5kJ5oO8eac path, .I_aApN9pSlbGcpLtFQWw path, 
+        .Vz6yjzttS0YlLcwrkoUR .gQUQL, .KVKoQ3u4JpKTvSSFtd6J path, 
+        .fn72ari9aEmKo4JcwteT .gQUQL, .mnipjT4SLDMgwiDCEnRC path, 
+        .uWvwXlS0Da1bWsRX6KOw, .etChWo, .fn72ari9aEmKo4JcwteT path, 
+        .volume-bar__icon-button .ldgdZj, .o_wMyH9_LbAmIwlVqsF0 path, 
+        .cVy6fGx6QtJbCnID7XdB path, .Vz6yjzttS0YlLcwrkoUR .ldgdZj, 
+        .VpYFchIiPg3tPhBGyynT, .n5XwsUqagSoVk8oMiw1x, .hQUEHs, .bbVjXa,
+        .mwpJrmCgLlVkJVtWjlI1 > .KAZD28usA1vPz5GVpm63 path, 
+        .volume-bar__icon-button path, .Vz6yjzttS0YlLcwrkoUR path, 
+        .FZhaXNtbN3Crwrgd0TA7 path, .jfwwWS.tGKwoPuvNBNK3TzCS5OH path, .tyZF5iwaJ6J5raHWkxwu,
+        .DMWoYmJsYdFjGQbeGH9Q .dYnaPI,
+        .control-button .kcUFwU,
+        .hYdsxw .bneLcE,
+        .gqJnng path,
+        .gacXSA path,
+        .control-button-feedback .dYnaPI,
+        .dYnaPI,
+        .Svg-sc-ytk21e-0, .kLkTcI, .cSWBDsMjkH62GXIXo6mQ,
+        .hYdsxw .cAMMLk, .i_FRcsaqNCEJmoyObIP0,
+        .active .encore-text-body-medium-bold, .hNvCMxbfz7HwgzLjt3IZ .encore-text-body-medium-bold,
+        .w0nWe_59HwsG7nQLoibF {
+            fill: custom_theme_color!important;
+            color: custom_theme_color!important;
+        }
+        
+        .vnCew8qzJq3cVGlYFXRI path {
+            fill: black!important
+        }
+        
+        .QavgDs_52SpJ2rw0LNYz {
+            display: none
+        }
+        .N3juGUCH1EhEzmffNHAp {
+            background: custom_theme_color!important;
+            filter: brightness(0.7) contrast(1.5);
+        }
+        .tP0mccyU1WAa7I9PevC1 .uPxdw,
+        .tP0mccyU1WAa7I9PevC1,
+        .OF_3F0SQCsBtL1jSTlTA,
+        .rRF_r7EyCHjZv058JACi .uPxdw {
+            color: custom_theme_color!important;
+            transition: all 0.5s
+        }
+        .rRF_r7EyCHjZv058JACi .uPxdw:hover {
+            filter: brightness(1.2);
+            scale: 1.1;
+            transition: all 0.5s
+        }
+        .epWhU7hHGktzlO_dop6z {
+            background: custom_theme_color;
+        }
+        
+        /* Like Button */
+        .vnCew8qzJq3cVGlYFXRI {
+            background: custom_theme_color!important;
+            transition: all 0.7s ease;
+        }
+        
+        .vnCew8qzJq3cVGlYFXRI:hover {
+            background: custom_theme_color!important;
+            filter: brightness(1.2);
+            scale: 1.1;
+            transition: all 0.5s;
+        } 
+
+        /* Active Track */
+        .iSbqnFdjb1SuyJ3uWydl .t_yrXoUO3qGsJS4Y6iXX.standalone-ellipsis-one-line, .y6bXimbi8JAcblOFxTap .iTEtJB {
+            color: custom_theme_color!important;
+        }
+        .fwTMCeAaUoWDj9WcQbgy path {
+            fill: custom_theme_color;
+        }
+        .iSbqnFdjb1SuyJ3uWydl {
+            background: ct_active_song;
+        } 
+
+        /* Connected Device Screen */
+        .Rpvqb, *[aria-label="Connect to a device"]::after, .hYdsxw::after {
+            color: custom_theme_color!important;
+        }
+        
+        .KAZD28usA1vPz5GVpm63.EHxL6K_6WWDlTCZP6x5w::after {
+            background: custom_theme_color!important
+        }
+        
+        .uWvwXlS0Da1bWsRX6KOw path,
+        .uWvwXlS0Da1bWsRX6KOw,
+        .INitzTSjokOMEJOc6P2H path,
+        .IbmaxRtjqCjqTBpFwCgw svg, .WFRr38dFOxh75JyzSTj5 svg, .IbmaxRtjqCjqTBpFwCgw svg, *[aria-label="Connect to a device"]::after, .hYdsxw::after {
+            fill: custom_theme_color!important;
+        }
+        
+        div .WFRr38dFOxh75JyzSTj5, div .IbmaxRtjqCjqTBpFwCgw, .WFRr38dFOxh75JyzSTj5 .encore-bright-accent-set .IbmaxRtjqCjqTBpFwCgw {
+            background:none!important;
+            fill:none!important;
+            color:none!important;
+        }
+        
+        div[aria-labelledby="listrow-title-0abd29c122030303983590690a927ed6eb2d8003 listrow-subtitle-0abd29c122030303983590690a927ed6eb2d8003"]:hover, aria-labelledby="device-picker-section-heading ":hover, .RowButton-sc-xxkq4e-0 .hIehTT:hover {
+            background:transparent!important
+        }
+        
+        .KYkSwfV1FCtD15TMChbH {
+            display:none
+        }
+    }
+    
+    .encore-dark-theme, .encore-dark-theme .encore-base-set {
+    --background-base: #1a1a1a;
+    --background-highlight: #1a1a1a;
+    --background-press: #1a1a1a;
+    --background-elevated-base: #1a1a1a;
+    --background-elevated-highlight: #1a1a1a;
+    --background-elevated-press: #1a1a1a;
+    --background-tinted-base: #1a1a1a;
+    --background-tinted-highlight: #1a1a1a;
+    --background-tinted-press: #1a1a1a;
+    --background-unsafe-for-small-text-base: #121212;
+    --background-unsafe-for-small-text-highlight: #121212;
+    --background-unsafe-for-small-text-press: #121212;
+    --text-base: #fff;
+    --text-subdued: #a7a7a7;
+    --text-bright-accent: #ee96ac;
+    --lyrics-color-inactive: #2c2c2c
+    --text-negative: #f15e6c;
+    --text-warning: #ffa42b;
+    --text-positive: #ffd1dc;
+    --text-announcement: #3d91f4;
+    --essential-base: #fff;
+    --essential-subdued: #727272;
+    --essential-bright-accent: #ffd1dc;
+    --essential-negative: #e91429;
+    --essential-warning: #ffa42b;
+    --essential-positive: #ffd1dc;
+    --essential-announcement: #0d72ea;
+    --decorative-base: #fff;
+    --decorative-subdued: #292929;
+    }
+
+    .FUYNhisXTCmbzt9IDxnT {
+        --lyrics-color-inactive: #2c2c2c!important;
+    }
+}
