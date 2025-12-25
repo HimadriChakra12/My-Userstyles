@@ -8,14 +8,22 @@
 
 @-moz-document url-prefix("https://open.spotify.com") {
     /* Insert code here... */
+    @font-face {
+        font-family: "Torus";
+        src: url("https://files.catbox.moe/88ntnj.otf");
+    }
+
+    *{
+        font-family: "Torus", sans-serif!important;
+    }
     :root{
         --orange: #d65d0e;
         --aqua: #8ec07c; 
-        
+
         --dark: #282828;
         --dark_1: #1d2021;
         --dark_2: #2C2C2C;
-        
+
         --accent: var(--aqua);
     }
     .wgtzoAN2iFV0pENAqJko.Y5DSUJKOG6sI99LanZGL, div[class="f9pLH3HRZQxdDLzNqKjE"], div[class="POZtIm1wHFiwlxZY5i0a"]{
@@ -23,6 +31,19 @@
     }
     .ZQftYELq0aOsg6tPbVbV {
         background-color: var(--dark);
+    }
+    header[class="VCH3TJP5s27cQwnxWKnA"], div[class="PfgTAe4hVhuNFZRuuKQG"]{
+        --background-base: var(--dark) !important;
+    }
+    div[class="us5p2PlqI8IJvxWYakKj"]{
+        display: none
+    }
+    div[class="LzVINwqiLdMt_bgS5psf ehHB7Xk2_FPwYofqZ9k2"]{
+        background-color: var(--dark_1) !important;
+        display: none    
+    }
+    div[class="LzVINwqiLdMt_bgS5psf"]{
+        background-color: var(--dark_2) !important
     }
     .encore-dark-theme {
         --background-base: var(--dark_2);
@@ -82,5 +103,19 @@
             background: var(--accent);
             filter: opacity(0.5)!important
         }
+    }
+
+    /*CleanUp*/
+    .GenericModal__overlay,
+    [aria-label=Advertisement],
+    [aria-label^=Browse],
+    [aria-label^=Desert],
+    [aria-label="Featured Charts"],
+    [aria-label^=Popular],
+    [aria-label^='Spotify original'],
+    [aria-label='State of music today'],
+    [aria-label="Trending songs"],
+    [aria-label='Recommended radio'] + * {
+        display: none;
     }
 }
