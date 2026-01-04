@@ -1,0 +1,145 @@
+/* ==UserStyle==
+@name           Messenger Auto Minimize Sidebar/Chat List
+@namespace      https://openuserjs.org/users/kevin_pan_940506
+@version        3.1.2
+@description    Minimize sidebars. Save your space of screen. (This code works better with messenger.com)
+@author         XiaoPanPanKevinPan
+@preprocessor   uso
+@var    text        triggerZone             "Trigger Zone's extra width"                                      0px
+@var    text        duration                "Transition duration"                                       0.25s
+@var    text        delay                   "Transition delay (e.g. before re-minimizing)"              0.75s
+@var    select      adjustScrollbar         "Adjust scrollbar (especially for Chrome)"                  {
+    "Show it as needed*": "",
+    "Don't adjust": ":not(*)"
+}
+==/UserStyle== */
+
+/* 
+ * In messenger, there are mainly 3 panels (from left to right)
+ *   1. Inbox Switcher
+ *   2. Thead List
+ *   3. Chat (conversation history + input box)
+ * Respectively, each can be selected with
+ *   1. [role="navigation"]:not([role="banner"] *):first-of-type
+ *   2.    [role="navigation"]:not([role="banner"] *):nth-of-type(2)
+ *      or [role="navigation"]:not([role="banner"] *):first-of-type ~ [role="navigation"]
+ *   3. [role="navigation"]:not([role="banner"] *) ~ *
+*/
+
+@-moz-document regexp("https?://www.messenger.com/.+"), regexp("https?://www.facebook.com/messages/.+") {
+    /* Hide the scroll bar, which may cause the trigger zone to be out of the viewbox */
+    /*[[adjustScrollbar]]*/ html:first-child:first-child { /*priority hack in adjustScrollbar*/
+        overflow-y: auto!important;
+    }
+    
+}
+
+@-moz-document regexp("https?://www.messenger.com/.+") {
+    /* Here is the messenger.com-only code */
+    
+    /* Only apply the style when the device-width is greater than 700px */
+    @media(min-width: 700px) {
+        /* Auto colapse 1. */
+        [role="navigation"]:not([role="banner"] *):first-of-type > * {
+            /* select the direct child since there's width is not set, 
+               which cause the transition effectless */
+
+            transition: width /*[[duration]]*/, opacity /*[[duration]]*/;
+            opacity: 1;
+        }
+        [role="navigation"]:not([role="banner"] *):first-of-type:not(
+            :hover, 
+            :focus-within, 
+            :is(:has(
+                ~[role="navigation"]:not([role="banner"] *):nth-of-type(2):is(:hover, :focus-within)
+            ))
+        ) > * {
+            transition: width /*[[duration]]*/ /*[[delay]]*/, opacity /*[[duration]]*/ /*[[delay]]*/, padding /*[[duration]]*/ /*[[delay]]*/;
+            width: /*[[triggerZone]]*/;
+            opacity: 0;
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        /* Auto collapse 2. */
+        [role="navigation"]:not([role="banner"] *):first-of-type
+        ~[role="navigation"]:not([role="banner"] *) {
+            transition: width /*[[duration]]*/, opacity /*[[duration]]*/, margin-left /*[[duration]]*/, min-width /*[[duration]]*/, flex-basis /*[[duration]]*/, flex-grow /*[[duration]]*/;
+            opacity: 1;
+        }
+        [role="navigation"]:not([role="banner"] *):first-of-type:not(:hover, :focus-within)
+        ~[role="navigation"]:not(:hover, :focus-within) {
+            transition: width /*[[duration]]*/ /*[[delay]]*/, opacity /*[[duration]]*/ /*[[delay]]*/, margin-left /*[[duration]]*/ /*[[delay]]*/, min-width /*[[duration]]*/ /*[[delay]]*/, flex-basis /*[[duration]]*/ /*[[delay]]*/, flex-grow /*[[duration]]*/ /*[[delay]]*/;
+            width: 0;
+            flex-basis: 0;
+            flex-grow: 0;
+            min-width: 0;
+            opacity: 0;
+            margin-left: 0; /* the space between Inbox and Thread Switcher */
+        }
+        
+        /* make the left space part of 1., so hovering there make expansion*/
+            /* remove the left space from the container of 1., 2. and 3. */
+            *:is(:has(
+                > [role="navigation"]:not([role="banner"] *):first-of-type,
+                > [role="navigation"]:not([role="banner"] *):nth-of-type(2)
+            )) {
+                padding-left: 0; 
+            }
+
+            /* compensate in 1. */
+            [role="navigation"]:not([role="banner"] *):first-of-type {
+                padding-left: var(--messenger-card-spacing);
+            }
+
+        /* hide the space between 2. and 3. when collapse */
+            [role="navigation"]:not([role="banner"] *) ~ * [role="main"] > * > * > * > *:first-child {
+                transition: margin /*[[duration]]*/;
+            }
+            [role="navigation"]:not([role="banner"] *):first-of-type:not(:hover, :focus-within)
+            ~ [role="navigation"]:not(:hover, :focus-within)[role="navigation"]:not([role="banner"] *) 
+            ~ * [role="main"] > * > * > * > *:first-child {
+                transition: margin /*[[duration]]*/ /*[[delay]]*/;
+                margin-left: 0; 
+            }
+    }
+}
+
+@-moz-document regexp("https?://www.facebook.com/messages/.+") {
+    /* Here is the facebook-only code */
+    
+    /* Auto colapse 1. */
+    [role="navigation"]:not([role="banner"] *):first-of-type > * {
+        /* select the direct child since there's width is not set, 
+           which cause the transition effectless */
+
+        transition: width /*[[duration]]*/, opacity /*[[duration]]*/;
+        opacity: 1;
+    }
+    [role="navigation"]:not([role="banner"] *):first-of-type:not(
+        :hover, 
+        :focus-within, 
+        :is(:has(
+            ~[role="navigation"]:not([role="banner"] *):nth-of-type(2):is(:hover, :focus-within)
+        ))
+    ) > * {
+        transition: width /*[[duration]]*/ /*[[delay]]*/, opacity /*[[duration]]*/ /*[[delay]]*/, padding /*[[duration]]*/ /*[[delay]]*/;
+        width: /*[[triggerZone]]*/;
+        opacity: 0;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    
+    [role="navigation"]:not([role="banner"] *) {
+        transition: width /*[[duration]]*/;
+    }
+    
+    [role="navigation"]:not([role="banner"] *):first-of-type:not(
+        :hover, 
+        :focus-within
+    ) {
+        transition: width /*[[duration]]*/ /*[[delay]]*/;
+        width: /*[[triggerZone]]*/;
+        min-width: 0;
+    }
+}
