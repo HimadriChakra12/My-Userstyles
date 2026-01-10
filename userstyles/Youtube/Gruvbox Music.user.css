@@ -1,0 +1,37 @@
+/* ==UserStyle==
+@name           Gruvbox Music
+@namespace      github.com/openstyles/stylus
+@version        1.0.0
+@description    A new userstyle
+@author         Me
+==/UserStyle== */
+
+@-moz-document domain("music.youtube.com") {
+    /* Insert code here... */
+    :root{
+        --orange: #d65d0e;
+        --aqua: #8ec07c; 
+
+        --dark: #282828;
+        --dark_1: #1d2021;
+        --dark_2: #2C2C2C;
+        
+        --content: var(--dark)
+            
+        --accent: var(--aqua);
+    }
+    tp-yt-app-drawer[id="guide"]{
+        background: var(--dark_1);
+    }
+    div[id="guide-content"], div[id="left-content"]{ 
+        background: var(--dark_1);
+    }
+    
+    div[id="contents"], div[id="header"], ytmusic-nav-bar{ 
+        background: var(--dark);
+            
+    }
+    div[class="content style-scope ytmusic-player-page"]{
+        background: var(--dark);
+    }
+}
